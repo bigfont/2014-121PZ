@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}"
 EndProject
@@ -239,6 +239,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Caching", "Orchard.Web\Modules\Orchard.Caching\Orchard.Caching.csproj", "{7528BF74-25C7-4ABE-883A-443B4EEC4776}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Azure.MediaServices", "Orchard.Web\Modules\Orchard.Azure.MediaServices\Orchard.Azure.MediaServices.csproj", "{14A96B1A-9DC9-44C8-A675-206329E15263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap_3_1_1_Base", "Orchard.Web\Themes\Bootstrap_3_1_1_Base\Bootstrap_3_1_1_Base.csproj", "{B7F63E83-5608-41CD-84F2-FEA3312993F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -998,6 +1000,16 @@ Global
 		{14A96B1A-9DC9-44C8-A675-206329E15263}.FxCop|Any CPU.Build.0 = Release|Any CPU
 		{14A96B1A-9DC9-44C8-A675-206329E15263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14A96B1A-9DC9-44C8-A675-206329E15263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1071,6 +1083,7 @@ Global
 		{33B1BC8D-E292-4972-A363-22056B207156} = {383DBA32-4A3E-48D1-AAC3-75377A694452}
 		{0DFA2E10-96C8-4E05-BC10-B710B97ECCDE} = {383DBA32-4A3E-48D1-AAC3-75377A694452}
 		{CB70A642-8CEC-4DDE-8C9F-AD08900EC98D} = {74492CBC-7201-417E-BC29-28B4C25A58B0}
+		{B7F63E83-5608-41CD-84F2-FEA3312993F6} = {74492CBC-7201-417E-BC29-28B4C25A58B0}
 		{7354DF37-934B-46CF-A13C-455D5F5F5413} = {3E10BF6D-ADA5-417D-B36C-EBB0660B475E}
 		{94E694A2-D140-468D-A277-C5FCE1D13E9B} = {3E10BF6D-ADA5-417D-B36C-EBB0660B475E}
 		{43D0EC0B-1955-4566-8D31-7B9102DA1703} = {902528F6-1444-42A3-8B75-A54B775B539C}
