@@ -1,0 +1,6 @@
+Name: Zolob.Bootstrap
+Author: Shaun Luttin, bigfont.ca
+Website: http://www.orchardproject.net
+Description: A theme designed specifically for Paul Zolob.
+Version: 1.0
+BaseTheme: Bootstrap_3_1_1_Base

@@ -20,6 +20,10 @@
 
   <Metadata>
     <Types>
+      <Layer DisplayName="Layer">
+        <LayerPart />
+        <CommonPart OwnerEditorSettings.ShowOwnerEditor="false" />
+      </Layer>
       <Page ContentTypeSettings.Creatable="True" ContentTypeSettings.Draftable="True" TypeIndexing.Indexes="Search" DisplayName="Page">
         <CommonPart DateEditorSettings.ShowDateEditor="False" OwnerEditorSettings.ShowOwnerEditor="False" />
         <PublishLaterPart />
