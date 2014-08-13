@@ -89,8 +89,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\synchronizing.gif" />
-    <Content Include="Recipes\blog.recipe.xml" />
     <Content Include="Recipes\zolob.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\blog.recipe.xml" />
+    <Content Include="Recipes\1-zolob.recipe.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Recipes\default.recipe.xml" />

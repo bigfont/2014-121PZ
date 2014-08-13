@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Zolob Queries</Name>
+    <Description>
+      The Zolob queries.
+    </Description>
+    <Author>Shaun Luttin</Author>
+    <WebSite>http://www.bigfont.ca</WebSite>
+    <Tags>client</Tags>
+    <Version>1.0</Version>
+  </Recipe>
+
+  <Data>
+    <Query Id="/Identifier=27d0d9e5495945e6a25f1ed60dc9162b" Status="Published">
+      <IdentityPart Identifier="27d0d9e5495945e6a25f1ed60dc9162b" />
+      <TitlePart Title="Real Estate Listings" />
+      <QueryPart>
+        <FilterGroups>
+          <FilterGroup>
+            <Filter Category="Content" Description="Real Estate Listing" Position="0" State="&lt;Form&gt;&lt;Description&gt;Real Estate Listing&lt;/Description&gt;&lt;ContentTypes&gt;RealEstateListing&lt;/ContentTypes&gt;&lt;/Form&gt;" Type="ContentTypes" />
+          </FilterGroup>
+        </FilterGroups>
+        <SortCriteria />
+        <Layouts />
+      </QueryPart>
+    </Query>
+  </Data>
+
+</Orchard>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Zolob Projection Page</Name>
+    <Description>
+      The Zolob projection page.
+    </Description>
+    <Author>Shaun Luttin</Author>
+    <WebSite>http://www.bigfont.ca</WebSite>
+    <Tags>client</Tags>
+    <Version>1.0</Version>
+  </Recipe>
+  <Data>
+    <ProjectionPage Id="/alias=listings" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T18:00:57.3868084Z" PublishedUtc="2014-08-13T18:00:57.6670041Z" ModifiedUtc="2014-08-13T18:00:57.4508576Z" />
+      <AutoroutePart Alias="listings" UseCustomPattern="false" />
+      <TitlePart Title="Listings" />
+      <AdminMenuPart AdminMenuPosition="5.1" OnAdminMenu="false" />
+      <ProjectionPart Items="0" ItemsPerPage="0" Offset="0" PagerSuffix="" MaxItems="20" DisplayPager="false" Query="/Identifier=27d0d9e5495945e6a25f1ed60dc9162b" LayoutIndex="-1" />
+    </ProjectionPage>
+  </Data>
+</Orchard>

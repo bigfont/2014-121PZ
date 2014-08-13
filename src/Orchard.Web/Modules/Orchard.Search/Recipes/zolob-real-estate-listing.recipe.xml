@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Zolob Real Estate Listing</Name>
+    <Description>
+      The Zolob listings.
+    </Description>
+    <Author>Shaun Luttin</Author>
+    <WebSite>http://www.bigfont.ca</WebSite>
+    <Tags>client</Tags>
+    <Version>1.0</Version>
+  </Recipe>
+  <Metadata>
+    <Types>
+      <RealEstateListing ContentTypeSettings.Creatable="True" ContentTypeSettings.Draftable="True" DisplayName="Real Estate Listing">
+        <CommonPart DateEditorSettings.ShowDateEditor="False" OwnerEditorSettings.ShowOwnerEditor="False" />
+        <BodyPart BodyTypePartSettings.Flavor="html" />
+        <TitlePart />
+        <AutoroutePart AutorouteSettings.PerItemConfiguration="False" AutorouteSettings.AllowCustomPattern="False" AutorouteSettings.AutomaticAdjustmentOnEdit="True" AutorouteSettings.PatternDefinitions="[{&quot;Name&quot;:&quot;Title&quot;,&quot;Pattern&quot;:&quot;{Content.Slug}&quot;,&quot;Description&quot;:&quot;my-title&quot;}]" AutorouteSettings.DefaultPatternIndex="0" />
+        <PublishLaterPart />
+      </RealEstateListing>
+    </Types>
+  </Metadata>
+  <Data>
+    <RealEstateListing Id="/alias=test-listing-title-number-1" Status="Published">
+      <BodyPart Text="&lt;p&gt;Test listing body 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:36:26.399251Z" PublishedUtc="2014-08-13T17:33:31.3668516Z" ModifiedUtc="2014-08-13T00:36:26.5398422Z" />
+      <AutoroutePart Alias="test-listing-title-number-1" UseCustomPattern="false" />
+      <TitlePart Title="Test Listing Title Number 1" />
+    </RealEstateListing>
+  </Data>
+
+</Orchard>
