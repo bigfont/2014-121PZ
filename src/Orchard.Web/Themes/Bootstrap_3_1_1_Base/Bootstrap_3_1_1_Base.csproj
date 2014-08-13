@@ -124,7 +124,6 @@
       <DependentUpon>Site.less</DependentUpon>
     </Content>
     <Content Include="Styles\Site\less\_TheThemeMachine-Bootstrap-Mixins.less" />
-    <Content Include="Styles\Site\less\_TheThemeMachine-Bootstrap-Navigation.less" />
     <Content Include="Styles\Site\less\_TheThemeMachine-Bootstrap-Scaffolding.less" />
     <Content Include="Styles\Site.less" />
     <Content Include="Styles\Theme.css">
@@ -147,6 +146,9 @@
     <Content Include="Styles\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Styles\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Styles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\Site.css.map">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
