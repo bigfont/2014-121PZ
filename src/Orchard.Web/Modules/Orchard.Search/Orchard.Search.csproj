@@ -107,7 +107,16 @@
     <Content Include="Recipes\zolob-pages-data.recipe.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Recipes\zolob-queries-and-projections.recipe.xml">
+    <Content Include="Recipes\zolob-real-estate-listing.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-queries.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-projection-pages.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-menus.recipe.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Recipes\zolob.recipe.xml">

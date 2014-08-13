@@ -179,8 +179,9 @@
   <ItemGroup>
     <Content Include="TheAdmin\Views\ErrorPage.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Zolob.Bootstrap\Views\" />
+    <Content Include="Zolob.Bootstrap\Views\ListingsSidebar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
