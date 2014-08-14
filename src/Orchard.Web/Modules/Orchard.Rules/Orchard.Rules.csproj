@@ -109,6 +109,10 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Forms\Orchard.Forms.csproj">
+      <Project>{642A49D7-8752-4177-80D6-BFBBCFAD3DE0}</Project>
+      <Name>Orchard.Forms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Scripting\Orchard.Scripting.csproj">
       <Project>{99002B65-86F7-415E-BF4A-381AA8AB9CCC}</Project>
       <Name>Orchard.Scripting</Name>

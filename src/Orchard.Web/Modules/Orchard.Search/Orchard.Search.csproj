@@ -104,6 +104,24 @@
     <Content Include="Recipes\Search.recipe.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Recipes\zolob-pages-data.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-real-estate-listing.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-queries.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-projection-pages.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob-menus.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Recipes\zolob.recipe.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Styles\orchard-search-admin.css" />
     <Content Include="Styles\orchard-search-search.css" />
   </ItemGroup>

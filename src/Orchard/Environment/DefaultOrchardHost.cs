@@ -277,6 +277,7 @@ namespace Orchard.Environment {
             // terminate the shell if the tenant was disabled
             else if (settings.State == TenantState.Disabled) {
                 shellContext.Shell.Terminate();
+                shellContext.LifetimeScope.Dispose();
                 _runningShellTable.Remove(settings);
 
                 // Forcing enumeration with ToArray() so a lazy execution isn't causing issues by accessing the disposed context.
@@ -288,6 +289,7 @@ namespace Orchard.Environment {
             else {
                 // dispose previous context
                 shellContext.Shell.Terminate();
+                shellContext.LifetimeScope.Dispose();
 
                 var context = _shellContextFactory.CreateShellContext(settings);
 

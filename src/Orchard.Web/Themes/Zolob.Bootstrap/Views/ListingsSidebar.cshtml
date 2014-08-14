@@ -1,0 +1,15 @@
+﻿@using Orchard.ContentManagement
+
+@{
+    var ci = Model.ContentItems;
+
+    <ul class="list-unstyled">
+        @foreach (dynamic item in ci)
+        {
+            var title = item.TitlePart.Title;
+            var href = Url.ItemDisplayUrl((IContent)item);
+
+            <li><a href="@href">@title</a></li>
+        }
+    </ul>
+}

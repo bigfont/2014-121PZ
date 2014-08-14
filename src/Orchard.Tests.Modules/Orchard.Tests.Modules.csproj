@@ -212,6 +212,10 @@
       <Project>{C0C45321-B51D-4D8D-9B7B-AA4C2E0B2962}</Project>
       <Name>Orchard.CodeGeneration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Web\Modules\Orchard.Comments\Orchard.Comments.csproj">
+      <Project>{14C049FD-B35B-415A-A824-87F26B26E7FD}</Project>
+      <Name>Orchard.Comments</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Web\Modules\Orchard.Email\Orchard.Email.csproj">
       <Project>{05660f47-d649-48bd-9ded-df4e01e7cff9}</Project>
       <Name>Orchard.Email</Name>
@@ -260,6 +264,10 @@
       <Project>{8c7fcbc2-e6e1-405e-bfb5-d8d9e67a09c4}</Project>
       <Name>Orchard.Setup</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Web\Modules\Orchard.Tags\Orchard.Tags.csproj">
+      <Project>{5D0F00F0-26C9-4785-AD61-B85710C60EB0}</Project>
+      <Name>Orchard.Tags</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Web\Modules\Orchard.Themes\Orchard.Themes.csproj">
       <Project>{CDE24A24-01D3-403C-84B9-37722E18DFB7}</Project>
       <Name>Orchard.Themes</Name>
@@ -275,6 +283,10 @@
     <ProjectReference Include="..\Orchard.Web\Modules\Orchard.Widgets\Orchard.Widgets.csproj">
       <Project>{194D3CCC-1153-474D-8176-FDE8D7D0D0BD}</Project>
       <Name>Orchard.Widgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Web\Modules\Orchard.Workflows\Orchard.Workflows.csproj">
+      <Project>{7059493C-8251-4764-9C1E-2368B8B485BC}</Project>
+      <Name>Orchard.Workflows</Name>
     </ProjectReference>
     <ProjectReference Include="..\Orchard\Orchard.Framework.csproj">
       <Project>{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}</Project>

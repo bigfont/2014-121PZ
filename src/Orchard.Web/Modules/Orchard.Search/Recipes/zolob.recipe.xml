@@ -1,0 +1,283 @@
+﻿<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+    <Name>Zolob</Name>
+    <Description>
+      The default recipe for Paul Zolob's site. 
+      setup /SiteName:"Paul Zolob" /AdminUsername:"admin" /AdminPassword:"password" /DatabaseProvider:SqlCe /Recipe:Zolob
+    </Description>
+    <Author>Shaun Luttin</Author>
+    <WebSite>http://www.bigfont.ca</WebSite>
+    <Tags>client</Tags>
+    <Version>1.0</Version>
+  </Recipe>
+
+  <Feature enable="Orchard.Alias,Orchard.Autoroute,
+                   TinyMce,Orchard.MediaLibrary,Orchard.ContentPicker,Orchard.PublishLater,
+                   Orchard.jQuery,Orchard.Widgets,Orchard.ContentTypes,
+                   Orchard.Scripting,Orchard.Scripting.Lightweight,PackagingServices,Orchard.Packaging,
+                   Orchard.Projections,Orchard.Fields,Orchard.OutputCache,Orchard.Taxonomies,TheThemeMachine" />
+  <Metadata>
+    <Types>
+      <MenuItem Description="Represents a simple custom link with a text and an url." Stereotype="MenuItem" DisplayName="Custom Link">
+        <MenuPart />
+        <IdentityPart />
+        <CommonPart />
+      </MenuItem>
+      <Menu DisplayName="Menu">
+        <CommonPart OwnerEditorSettings.ShowOwnerEditor="false" />
+        <TitlePart />
+        <IdentityPart />
+      </Menu>
+      <MenuWidget Stereotype="Widget" DisplayName="Menu Widget">
+        <CommonPart />
+        <IdentityPart />
+        <WidgetPart />
+        <MenuWidgetPart />
+      </MenuWidget>
+      <Page ContentTypeSettings.Creatable="True" ContentTypeSettings.Draftable="True" TypeIndexing.Indexes="Search" DisplayName="Page">
+        <CommonPart DateEditorSettings.ShowDateEditor="False" OwnerEditorSettings.ShowOwnerEditor="False" />
+        <PublishLaterPart />
+        <TitlePart />
+        <AutoroutePart AutorouteSettings.AllowCustomPattern="False" AutorouteSettings.AutomaticAdjustmentOnEdit="True" AutorouteSettings.PatternDefinitions="[{&quot;Name&quot;:&quot;Title&quot;,&quot;Pattern&quot;:&quot;{Content.Slug}&quot;,&quot;Description&quot;:&quot;my-page&quot;}]" AutorouteSettings.DefaultPatternIndex="0" AutorouteSettings.PerItemConfiguration="False" />
+        <BodyPart BodyTypePartSettings.Flavor="html" />
+      </Page>
+      <Layer DisplayName="Layer">
+        <LayerPart />
+        <CommonPart OwnerEditorSettings.ShowOwnerEditor="false" />
+      </Layer>
+      <Query DisplayName="Query">
+        <QueryPart />
+        <TitlePart />
+        <IdentityPart />
+      </Query>
+      <ProjectionWidget Stereotype="Widget" DisplayName="Projection Widget">
+        <WidgetPart />
+        <CommonPart />
+        <IdentityPart />
+        <ProjectionPart />
+      </ProjectionWidget>
+      <ProjectionPage ContentTypeSettings.Creatable="True" DisplayName="Projection">
+        <CommonPart />
+        <TitlePart />
+        <AutoroutePart AutorouteSettings.AllowCustomPattern="true" AutorouteSettings.AutomaticAdjustmentOnEdit="false" AutorouteSettings.PatternDefinitions="[{Name:'Title', Pattern: '{Content.Slug}', Description: 'my-projections'}]" AutorouteSettings.DefaultPatternIndex="0" />
+        <MenuPart />
+        <ProjectionPart />
+        <AdminMenuPart AdminMenuPartTypeSettings.DefaultPosition="5" />
+      </ProjectionPage>
+      <RealEstateListing ContentTypeSettings.Creatable="True" ContentTypeSettings.Draftable="True" DisplayName="Real Estate Listing">
+        <CommonPart DateEditorSettings.ShowDateEditor="False" OwnerEditorSettings.ShowOwnerEditor="False" />
+        <BodyPart BodyTypePartSettings.Flavor="html" />
+        <TitlePart />
+        <AutoroutePart AutorouteSettings.PerItemConfiguration="False" AutorouteSettings.AllowCustomPattern="False" AutorouteSettings.AutomaticAdjustmentOnEdit="True" AutorouteSettings.PatternDefinitions="[{&quot;Name&quot;:&quot;Title&quot;,&quot;Pattern&quot;:&quot;{Content.Slug}&quot;,&quot;Description&quot;:&quot;my-title&quot;}]" AutorouteSettings.DefaultPatternIndex="0" />
+        <PublishLaterPart />
+      </RealEstateListing>
+    </Types>
+    <Parts>
+      <MenuPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Provides an easy way to create a ContentMenuItem from the content editor." />
+      <IdentityPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Automatically generates a unique identity for the content item, which is required in import/export scenarios where one content item references another." />
+      <CommonPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Provides common information about a content item, such as Owner, Date Created, Date Published and Date Modified." />
+      <TitlePart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Provides a Title for your content item." />
+      <WidgetPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Turns a content type into a Widget. Note: you need to set the stereotype to &quot;Widget&quot; as well." />
+      <MenuWidgetPart />
+      <PublishLaterPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Adds the ability to delay the publication of a content item to a later date and time." />
+      <AutoroutePart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Adds advanced url configuration options to your content type to completely customize the url pattern for a content item." />
+      <BodyPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Allows the editing of text using an editor provided by the configured flavor (e.g. html, text, markdown)." BodyPartSettings.FlavorDefault="html" />
+      <LayerPart />
+      <QueryPart />
+      <ProjectionPart />
+      <AdminMenuPart ContentPartSettings.Attachable="True" ContentPartSettings.Description="Adds a menu item to the Admin menu that links to this content item." />
+    </Parts>
+  </Metadata>
+  <Data>
+    <Layer Id="/Layer.LayerName=Default" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.2414717Z" PublishedUtc="2014-08-13T17:33:32.2534799Z" ModifiedUtc="2014-08-13T17:33:32.2414717Z" />
+      <LayerPart Name="Default" Description="The widgets in this layer are displayed on all pages" LayerRule="true" />
+    </Layer>
+    <Layer Id="/Layer.LayerName=Authenticated" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.2624865Z" PublishedUtc="2014-08-13T17:33:32.2644875Z" ModifiedUtc="2014-08-13T17:33:32.2624865Z" />
+      <LayerPart Name="Authenticated" Description="The widgets in this layer are displayed when the user is authenticated" LayerRule="authenticated" />
+    </Layer>
+    <Layer Id="/Layer.LayerName=Anonymous" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.2724928Z" PublishedUtc="2014-08-13T17:33:32.2734941Z" ModifiedUtc="2014-08-13T17:33:32.2724928Z" />
+      <LayerPart Name="Anonymous" Description="The widgets in this layer are displayed when the user is anonymous" LayerRule="not authenticated" />
+    </Layer>
+    <Layer Id="/Layer.LayerName=Disabled" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.2814994Z" PublishedUtc="2014-08-13T17:33:32.2825003Z" ModifiedUtc="2014-08-13T17:33:32.2814994Z" />
+      <LayerPart Name="Disabled" Description="The widgets in this layer are never displayed" LayerRule="false" />
+    </Layer>
+    <Layer Id="/Layer.LayerName=TheHomepage" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.290506Z" PublishedUtc="2014-08-13T17:33:32.2915065Z" ModifiedUtc="2014-08-13T17:33:32.290506Z" />
+      <LayerPart Name="TheHomepage" Description="The widgets in this layer are displayed on the home page" LayerRule="url '~/'" />
+    </Layer>
+    <Menu Id="/Identifier=93c066ba69b54a228104a9d65ad98e36" Status="Published">
+      <IdentityPart Identifier="93c066ba69b54a228104a9d65ad98e36" />
+      <CommonPart CreatedUtc="2014-08-13T17:33:32.3045164Z" PublishedUtc="2014-08-13T17:33:32.3105203Z" ModifiedUtc="2014-08-13T17:33:32.3045164Z" />
+      <TitlePart Title="Main Menu" />
+    </Menu>
+    <MenuItem Id="/Identifier=d041be2f3f6543d294b56873cefbe7fb" Status="Published">
+      <IdentityPart Identifier="d041be2f3f6543d294b56873cefbe7fb" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.3325359Z" PublishedUtc="2014-08-13T17:33:32.3385402Z" ModifiedUtc="2014-08-13T17:33:32.3325359Z" />
+      <MenuItemPart Url="~/" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Paul Zolob" MenuPosition="1" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=98ad97e7d5cc4776acf58c877555e1e4" Status="Published">
+      <IdentityPart Identifier="98ad97e7d5cc4776acf58c877555e1e4" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.3525498Z" PublishedUtc="2014-08-13T17:33:32.3545516Z" ModifiedUtc="2014-08-13T17:33:32.3525498Z" />
+      <MenuItemPart Url="profile" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Profile" MenuPosition="2" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=d54630274f4747168d5e49cb5b0d3bcd" Status="Published">
+      <IdentityPart Identifier="d54630274f4747168d5e49cb5b0d3bcd" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.3665622Z" PublishedUtc="2014-08-13T17:33:32.3675639Z" ModifiedUtc="2014-08-13T17:33:32.3665622Z" />
+      <MenuItemPart Url="buyers" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Buyers Info" MenuPosition="4" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=bbb27f541758473ab9e268e40e6ead9b" Status="Published">
+      <IdentityPart Identifier="bbb27f541758473ab9e268e40e6ead9b" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.3855772Z" PublishedUtc="2014-08-13T17:33:32.3865785Z" ModifiedUtc="2014-08-13T17:33:32.3855772Z" />
+      <MenuItemPart Url="sellers" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Sellers Info" MenuPosition="5" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=16546e4d940f4ae6a6afe0d6d5436ee9" Status="Published">
+      <IdentityPart Identifier="16546e4d940f4ae6a6afe0d6d5436ee9" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.3995859Z" PublishedUtc="2014-08-13T17:33:32.4005872Z" ModifiedUtc="2014-08-13T17:33:32.3995859Z" />
+      <MenuItemPart Url="contact" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Contact Info" MenuPosition="6" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=fd9474f5bde34766a04bcdba5fdc31ee" Status="Published">
+      <IdentityPart Identifier="fd9474f5bde34766a04bcdba5fdc31ee" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.4135934Z" PublishedUtc="2014-08-13T17:33:32.4155953Z" ModifiedUtc="2014-08-13T17:33:32.4135934Z" />
+      <MenuItemPart Url="salt-spring-island" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Salt Spring Island" MenuPosition="7" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=b5d381611f3348f58f362c92968d4c54" Status="Published">
+      <IdentityPart Identifier="b5d381611f3348f58f362c92968d4c54" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T17:33:32.4276034Z" PublishedUtc="2014-08-13T17:33:32.4286047Z" ModifiedUtc="2014-08-13T17:33:32.4276034Z" />
+      <MenuItemPart Url="resources" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Resources &amp; Links" MenuPosition="8" />
+    </MenuItem>
+    <MenuItem Id="/Identifier=70064a5963c94417bfad0bf04fa430cf" Status="Published">
+      <IdentityPart Identifier="70064a5963c94417bfad0bf04fa430cf" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T18:01:20.0228574Z" PublishedUtc="2014-08-13T18:01:20.0688902Z" ModifiedUtc="2014-08-13T18:01:20.0268603Z" />
+      <MenuItemPart Url="~/listings" />
+      <MenuPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" MenuText="Listings" MenuPosition="3" />
+    </MenuItem>
+    <MenuWidget Id="/Identifier=MenuWidget1" Status="Published">
+      <IdentityPart Identifier="MenuWidget1" />
+      <CommonPart Owner="/User.UserName=admin" Container="/Layer.LayerName=Default" CreatedUtc="2014-08-13T17:33:32.4776394Z" PublishedUtc="2014-08-13T17:33:32.4856447Z" ModifiedUtc="2014-08-13T17:33:32.4776394Z" />
+      <WidgetPart Title="Main Menu" Position="1" Zone="Navigation" RenderTitle="false" Name="" />
+      <MenuWidgetPart Menu="/Identifier=93c066ba69b54a228104a9d65ad98e36" StartLevel="1" Levels="0" Breadcrumb="false" AddCurrentPage="false" AddHomePage="false" ShowFullMenu="false" />
+    </MenuWidget>
+    <Page Id="/alias=" Status="Published">
+      <BodyPart Text="&lt;p&gt;DILIGENT, SINCERE, DISCREET AND ALWAYS CLIENT FOCUSED.&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:51.8838001Z" PublishedUtc="2014-08-13T17:33:30.9035208Z" ModifiedUtc="2014-08-13T00:42:48.1249762Z" />
+      <AutoroutePart Alias="/" CustomPattern="/" UseCustomPattern="true" />
+      <TitlePart Title="Paul Zolob" />
+    </Page>
+    <Page Id="/alias=profile" Status="Published">
+      <BodyPart Text="&lt;p&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;Paul&amp;rsquo;s previous career was in home renovations. It was while working in this career that Paul learned how important service is to homeowners &amp;ndash; this is one of the many skills that Paul has transferred to his real estate career. His firsthand experience as a business owner has also helped him develop expert negotiation skills, and a genuine desire to strive for the best possible outcome for every client.&lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;Paul&amp;rsquo;s desire to deliver outstanding service is tailored to buyers and sellers needs.&lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;&amp;ldquo;I don&amp;rsquo;t think of myself as a superman real estate agent&amp;rdquo; he said. &amp;ldquo;When people are dealing with me I want them to feel good about the process. &amp;ldquo;My focus is to provide the best service possible. I am committed to excellence and I pay close attention to detail. I put pride in&amp;nbsp;and emphasis on accountability, reliability, timeliness and enthusiasm.&amp;nbsp;I&amp;nbsp;provide all&amp;nbsp;my clients with all the information necessary to help them make the right real estate investment decisions.&amp;rdquo;&lt;/span&gt;&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:52.4638279Z" PublishedUtc="2014-08-13T17:33:31.0716388Z" ModifiedUtc="2014-08-13T00:43:21.0724707Z" />
+      <AutoroutePart Alias="profile" CustomPattern="profile" UseCustomPattern="true" />
+      <TitlePart Title="Profile" />
+    </Page>
+    <Page Id="/alias=buyers" Status="Published">
+      <BodyPart Text="&lt;p&gt;When thinking about buying a home, you should spend time familiarizing yourself with the MLS system, if you have not already, it&amp;rsquo;s easy to use and can be fun. Realtors.ca has most listings available for your perusal.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Pictures and information are great&amp;hellip;but seeing first hand is believing. My background in home renovations is an asset I use to benefit all my clients.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;I work closely with my clients to get full understanding of individual buyer needs to help save time and possibly frustration. Together we qualify listings that meet specific required criteria. Many of my clients have busy lives and their time is important. Going through and seeing hundreds of listings is too much&amp;hellip;that&amp;rsquo;s my job!&lt;br /&gt;&lt;br /&gt;CLIENTS COMMENTS&lt;br /&gt;&lt;br /&gt;My Service&amp;hellip;&lt;br /&gt;&lt;br /&gt;Greg and Trish Staicesku&lt;br /&gt;&lt;br /&gt;&amp;ldquo; Blah, Blah, Blah&amp;hellip;..&amp;rdquo;&lt;br /&gt;&lt;br /&gt;Grant Greyson &amp;amp; Elena Dunn&lt;br /&gt;&lt;br /&gt;&amp;ldquo; Blah, Blah, Blah&amp;hellip;..&amp;rdquo;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Mark Fedikow &amp;amp; Ruth Bezys&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:52.6398386Z" PublishedUtc="2014-08-13T17:33:31.1577026Z" ModifiedUtc="2014-08-13T00:43:49.7199287Z" />
+      <AutoroutePart Alias="buyers" CustomPattern="buyers" UseCustomPattern="true" />
+      <TitlePart Title="Buyers Info" />
+    </Page>
+    <Page Id="/alias=sellers" Status="Published">
+      <BodyPart Text="&lt;p&gt;Your marketing plan to sell your home starts with understanding the target market, I work with you to develop a strategy designed specifically for your home.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Marketing your home is so much more than just listing it on MLS. Todays competitive marketplace demands a Realtor&amp;reg; that does more to sell your home. I will provide you with a home evaluation and all comparable sales information, and work with you on setting the right price.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;My marketing plan continually changes as not all homes and sales environments are similar. Understanding each individual situation, and customizing a sales strategy to maximize your home&amp;rsquo;s exposure will provide the added value you need, deserve, and can expect, when listing with your home with me.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;CLIENTS COMMENTS&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;My Service&amp;hellip;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Joan Meyers&lt;br /&gt;&amp;ldquo; Blah, Blah, Blah&amp;hellip;..&amp;rdquo;&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:52.7478693Z" PublishedUtc="2014-08-13T17:33:31.2017314Z" ModifiedUtc="2014-08-13T00:44:09.7701268Z" />
+      <AutoroutePart Alias="sellers" CustomPattern="sellers" UseCustomPattern="true" />
+      <TitlePart Title="Sellers Info" />
+    </Page>
+    <Page Id="/alias=contact" Status="Published">
+      <BodyPart Text="&lt;p&gt;Paul Zolob&lt;br /&gt;Salt Spring Realty &amp;ndash; Royal LePage&lt;br /&gt;Phone: 250.526.2626&lt;br /&gt;Email: p.zolob1@gmail.com&lt;br /&gt;#103 - 342 Lower Ganges Road, Salt Spring Island, BC&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:52.8528755Z" PublishedUtc="2014-08-13T17:33:31.2447619Z" ModifiedUtc="2014-08-13T00:44:29.3987905Z" />
+      <AutoroutePart Alias="contact" CustomPattern="contact" UseCustomPattern="true" />
+      <TitlePart Title="Contact Info" />
+    </Page>
+    <Page Id="/alias=salt-spring-island" Status="Published">
+      <BodyPart Text="&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%; tab-stops: 14.2pt;&quot;&gt;&lt;em&gt;&lt;span style=&quot;font-size: 11pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;We have it all!&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%; tab-stops: 14.2pt;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;Salt Spring is located between Vancouver Island and the Mainland in the Strait of Georgia alongside its neighbouring islands of Galiano, Pender, Saturna, Maine and Prevost. It is the largest (70 square miles or 180 square kilometres), most populated (10,500) and, some might say most popular, of the Southern Gulf Islands. (insert map) Getting here is easy as we are serviced by BC Ferries at 3 separate terminals with easy access from Vancouver Island as well as direct service from the mainland.&lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%; tab-stops: 14.2pt;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;The Island boasts diverse lifestyles for anyone wanting to live here as either a permanent or seasonal resident. No two properties are the same. If you desire an oceanfront property with a place to dock your boat or a serene forested piece of paradise where you can hide and let the stresses of everyday life float away on the breeze, you can find it here. &lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%; tab-stops: 14.2pt;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;There are many amenities here on the Island that includes elementary and high schools, banks, grocery stores, recreational facilities, pharmacies, hardware stores and a host of services such as veterinary, dental and our own Lady Minto Hospital. Salt Spring Island also has the archipelago&amp;rsquo;s only town. Ganges (called &amp;ldquo;the village&amp;rdquo; by visitors and &amp;ldquo;downtown&amp;rdquo; by residents) is a pedestrian-friendly cluster of cafes, bookstores and many art galleries and craft shops. Salt Spring has one of the most thriving arts communities and could well have more artisans per capita than anywhere else in Canada. Perhaps you are an avid boater? We have everything you need. Being nestled in the Gulf Islands, you can take in the Islands scenery while not having to worry about open ocean winds making your leisure boating or fishing experiences very enjoyable. We have private and public launches as well as many marine services including repair facilities.&lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%; tab-stops: 14.2pt;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;Feeling energetic? Salt Spring Island is full of things to do such as cycling, kayaking, hiking, swimming or just taking a walk on the many maintained trails on the Island. With our temperate climate, many of these activities can be done year round.&lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p class=&quot;MsoNormal&quot; style=&quot;line-height: 150%; tab-stops: 14.2pt;&quot;&gt;&lt;span style=&quot;font-size: 11.0pt; line-height: 150%; font-family: 'Arial','sans-serif';&quot;&gt;I have encountered so many residents of the Island that came to visit &amp;ldquo;for a few days&amp;rdquo; and simply never left. Come and see what Salt Spring Island has to offer you!&lt;/span&gt;&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:52.9528808Z" PublishedUtc="2014-08-13T17:33:31.2797866Z" ModifiedUtc="2014-08-13T00:44:54.0320504Z" />
+      <AutoroutePart Alias="salt-spring-island" CustomPattern="salt-spring-island" UseCustomPattern="true" />
+      <TitlePart Title="Salt Spring Island" />
+    </Page>
+    <Page Id="/alias=resources" Status="Published">
+      <BodyPart Text="&lt;ul&gt;&#xD;&#xA;&lt;li&gt;http://www.driftwoodgulfislandsmedia.com/ This site has links to local paper, magazines including latest Real Estate magazine. You can also check out the gulfislandstourism.com website for extensive accommodation, dining &amp;amp; entertainment info.&lt;/li&gt;&#xD;&#xA;&lt;li&gt;BC Ferries&lt;/li&gt;&#xD;&#xA;&lt;li&gt;http://saltspringair.com/&lt;/li&gt;&#xD;&#xA;&lt;li&gt;http://www.harbourair.com/&lt;/li&gt;&#xD;&#xA;&lt;li&gt;CMHC&lt;/li&gt;&#xD;&#xA;&lt;li&gt;School District 64&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:27:53.0838669Z" PublishedUtc="2014-08-13T17:33:31.3158122Z" ModifiedUtc="2014-08-13T00:45:20.445197Z" />
+      <AutoroutePart Alias="resources" CustomPattern="resources" UseCustomPattern="true" />
+      <TitlePart Title="Resources &amp; Links" />
+    </Page>
+    <ProjectionPage Id="/alias=listings" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T18:00:57.3868084Z" PublishedUtc="2014-08-13T18:00:57.6670041Z" ModifiedUtc="2014-08-13T18:00:57.4508576Z" />
+      <AutoroutePart Alias="listings" UseCustomPattern="false" />
+      <TitlePart Title="Listings" />
+      <AdminMenuPart AdminMenuPosition="5.1" OnAdminMenu="false" />
+      <ProjectionPart Items="0" ItemsPerPage="0" Offset="0" PagerSuffix="" MaxItems="20" DisplayPager="false" Query="/Identifier=27d0d9e5495945e6a25f1ed60dc9162b" LayoutIndex="-1" />
+    </ProjectionPage>
+    <ProjectionWidget Id="/Identifier=efecfb7ae1ad477391a166fd68363e2f" Status="Published">
+      <IdentityPart Identifier="efecfb7ae1ad477391a166fd68363e2f" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:38:19.3299061Z" PublishedUtc="2014-08-13T17:33:30.7153849Z" ModifiedUtc="2014-08-13T00:38:19.3611658Z" />
+      <WidgetPart Title="Real Estate Listings" Position="1" Zone="AsideFirst" RenderTitle="true" Name="" />
+      <ProjectionPart Items="0" ItemsPerPage="0" Offset="0" PagerSuffix="" MaxItems="20" DisplayPager="false" Query="/Identifier=27d0d9e5495945e6a25f1ed60dc9162b" LayoutIndex="-1" />
+    </ProjectionWidget>
+    <Query Id="/Identifier=27d0d9e5495945e6a25f1ed60dc9162b" Status="Published">
+      <IdentityPart Identifier="27d0d9e5495945e6a25f1ed60dc9162b" />
+      <TitlePart Title="Real Estate Listings" />
+      <QueryPart>
+        <FilterGroups>
+          <FilterGroup>
+            <Filter Category="Content" Description="Real Estate Listing" Position="0" State="&lt;Form&gt;&lt;Description&gt;Real Estate Listing&lt;/Description&gt;&lt;ContentTypes&gt;RealEstateListing&lt;/ContentTypes&gt;&lt;/Form&gt;" Type="ContentTypes" />
+          </FilterGroup>
+        </FilterGroups>
+        <SortCriteria />
+        <Layouts />
+      </QueryPart>
+    </Query>
+    <RealEstateListing Id="/alias=test-listing-title-number-1" Status="Published">
+      <BodyPart Text="&lt;p&gt;Test listing body 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2014-08-13T00:36:26.399251Z" PublishedUtc="2014-08-13T17:33:31.3668516Z" ModifiedUtc="2014-08-13T00:36:26.5398422Z" />
+      <AutoroutePart Alias="test-listing-title-number-1" UseCustomPattern="false" />
+      <TitlePart Title="Test Listing Title Number 1" />
+    </RealEstateListing>
+  </Data>
+
+  <Settings />
+
+  <Migration features="*" />
+
+  <Command>
+    <!--layer create Default /LayerRule:"true" /Description:"The widgets in this layer are displayed on all pages"
+    layer create Authenticated /LayerRule:"authenticated" /Description:"The widgets in this layer are displayed when the user is authenticated"
+    layer create Anonymous /LayerRule:"not authenticated" /Description:"The widgets in this layer are displayed when the user is anonymous"
+    layer create Disabled /LayerRule:"false" /Description:"The widgets in this layer are never displayed"
+    layer create TheHomepage /LayerRule:"url '~/'" /Description:"The widgets in this layer are displayed on the home page"-->
+    
+    site setting set baseurl
+    
+    <!--menu create /MenuName:"Main Menu"-->
+
+    <!--page create /Slug:"home" /Title:"Paul Zolob" /Path:"home" /Homepage:true /Publish:true /UseWelcomeText:false
+    page create /Slug:"profile" /Title:"Profile" /Path:"profile" /Homepage:false /Publish:true /UseWelcomeText:false
+    page create /Slug:"buyers" /Title:"Buyers Info" /Path:"buyers" /Homepage:false /Publish:true /UseWelcomeText:false
+    page create /Slug:"sellers" /Title:"Sellers Info" /Path:"sellers" /Homepage:false /Publish:true /UseWelcomeText:false
+    page create /Slug:"contact" /Title:"Contact Info" /Path:"contact" /Homepage:false /Publish:true /UseWelcomeText:false
+    page create /Slug:"salt-spring-island" /Title:"Salt Spring Island" /Path:"salt-spring-island" /Homepage:false /Publish:true /UseWelcomeText:false
+    page create /Slug:"resources" /Title:"Resources &amp; Links" /Path:"resources" /Homepage:false /Publish:true /UseWelcomeText:false-->
+
+    <!--menuitem create /MenuPosition:"0" /MenuText:"Paul Zolob" /Url:"~/" /MenuName:"Main Menu"
+    menuitem create /MenuPosition:1 /MenuText:"Profile" /Url:"profile" /MenuName:"Main Menu" /Owner:admin
+    menuitem create /MenuPosition:2 /MenuText:"Buyers Info" /Url:"buyers" /MenuName:"Main Menu" /Owner:admin
+    menuitem create /MenuPosition:3 /MenuText:"Sellers Info" /Url:"sellers" /MenuName:"Main Menu" /Owner:admin
+    menuitem create /MenuPosition:4 /MenuText:"Contact Info" /Url:"contact" /MenuName:"Main Menu" /Owner:admin
+    menuitem create /MenuPosition:5 /MenuText:"Salt Spring Island" /Url:"salt-spring-island" /MenuName:"Main Menu" /Owner:admin
+    menuitem create /MenuPosition:6 /MenuText:"Resources &amp; Links" /Url:"resources" /MenuName:"Main Menu" /Owner:admin
+
+    widget create MenuWidget /Title:"Main Menu" /RenderTitle:false /Zone:"Navigation" /Position:"1" /Layer:"Default" /Identity:"MenuWidget1" /MenuName:"Main Menu"-->
+    theme activate "The Theme Machine"
+    
+  </Command>
+</Orchard>
