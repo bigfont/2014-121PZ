@@ -1,21 +1,31 @@
-﻿body {
+﻿@max-width: 1200px;
+
+body {
+    max-width: @max-width;
     padding-top: 40px;
+    margin: auto;
 }
 
-#layout-header {
-    background: url("imgs/masthead-desktop.jpg");
-    /* make sure we see the entire image*/
+.widget-masthead {
+    background: url("/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #branding {
-    /* for now */
     display: none;
     visibility: hidden;
 }
 
-.navbar a {
-    font-size: 20px;
-    text-transform: uppercase;
+.navbar {
+    a {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .navbar-nav {
+        float: none;
+        margin: auto;
+        max-width: @max-width + 200px;
+    }
 }
