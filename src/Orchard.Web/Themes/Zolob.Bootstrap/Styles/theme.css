@@ -1,7 +1,5 @@
 ﻿body {
   padding-top: 40px;
-  background: #222222;
-  color: white;
 }
 #layout-header {
   background: url("imgs/masthead-desktop.jpg");
@@ -13,5 +11,9 @@
   /* for now */
   display: none;
   visibility: hidden;
+}
+.navbar a {
+  font-size: 20px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=theme.css.map */
