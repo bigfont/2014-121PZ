@@ -1,4 +1,10 @@
 ﻿@max-width: 1200px;
+@masthead-url: "/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg";
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
 
 body {
     max-width: @max-width;
@@ -6,15 +12,8 @@ body {
     margin: auto;
 }
 
-.widget-masthead {
-    background: url("/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 #branding {
-    display: none;
-    visibility: hidden;
+    .hide;
 }
 
 .navbar {
@@ -27,5 +26,23 @@ body {
         float: none;
         margin: auto;
         max-width: @max-width + 200px;
+    }
+}
+
+.widget-masthead {
+    background: url(@masthead-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#layout-footer {
+    border-top:solid thin gray;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:20px;
+    .zone-footer {
+        .credits {
+            .hide;
+        }
     }
 }
