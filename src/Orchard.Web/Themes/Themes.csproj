@@ -62,15 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Zolob.Bootstrap\Scripts\theme.js" />
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
     <Content Include="Zolob.Bootstrap\Styles\imgs\paul-zolob-silhouette.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\paul-zolob.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\sunset.jpg" />
-    <Content Include="Zolob.Bootstrap\Styles\theme.css">
-      <DependentUpon>theme.less</DependentUpon>
-    </Content>
-    <Content Include="Zolob.Bootstrap\Styles\theme.min.css">
-      <DependentUpon>theme.css</DependentUpon>
-    </Content>
     <Content Include="Zolob.Bootstrap\Web.config" />
     <Content Include="Zolob.Bootstrap\Scripts\Web.config" />
     <Content Include="Zolob.Bootstrap\Styles\Web.config" />
@@ -193,15 +193,132 @@
     <Content Include="Zolob.Bootstrap\Views\ListingsSidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Zolob.Bootstrap\Styles\theme.less" />
+    <Content Include="Zolob.Bootstrap\Views\Widget-MenuWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Zolob.Bootstrap\Styles\theme.css.map">
-      <DependentUpon>theme.css</DependentUpon>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\alerts.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\badges.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\breadcrumbs.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\button-groups.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\buttons.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\carousel.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\close.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\code.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\component-animations.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\dropdowns.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\forms.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\glyphicons.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\grid.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\input-groups.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\jumbotron.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\labels.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\list-group.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\media.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\mixins.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\modals.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\navbar.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\navs.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\normalize.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\pager.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\pagination.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\panels.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\popovers.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\print.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\progress-bars.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\responsive-utilities.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\scaffolding.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\tables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\theme.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\thumbnails.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\tooltip.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\type.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\utilities.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\variables.css.map">
+      <DependentUpon>variables.css</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Zolob.Bootstrap\Views\Widget-MenuWidget.cshtml" />
+    <Content Include="Zolob.Bootstrap\Styles\Bootstrap\less\wells.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\theme.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

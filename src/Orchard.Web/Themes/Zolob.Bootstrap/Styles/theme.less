@@ -1,8 +1,12 @@
-﻿@max-width: 1200px;
-@masthead-url: "/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg";
+﻿@import "Bootstrap/less/variables.less";
+@import "Bootstrap/less/mixins.less";  
+@import "Bootstrap/less/scaffolding.less";
 
+@max-width: 1200px; 
+@masthead-url: "/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg";
+ 
 .hide {
-    display: none;
+    display: none; 
     visibility: hidden;
 }
 
@@ -12,36 +16,63 @@ body {
     margin: auto;
 }
 
-#branding {
-    .hide;
-}
+#layout-header {
 
-.navbar {
-    a {
-        font-size: 20px;
-        text-transform: uppercase;
+    .widget-masthead {
+        background: url(@masthead-url);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
-    .navbar-nav {
-        float: none;
-        margin: auto;
-        max-width: @max-width + 200px;
+    #branding {
+        .hide;
     }
 }
 
-.widget-masthead {
-    background: url(@masthead-url);
-    background-size: contain;
-    background-repeat: no-repeat;
+#layout-navigation {
+    .navbar {
+        a {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav {
+            float: none;
+            margin: auto;
+            max-width: @max-width + 200px;
+        }
+    }
+}
+
+#layout-main-container
+{
+    #layout-main
+    {
+        .aside-first
+        {
+            .widget-businesscard
+            {
+                margin:40px 0;
+                height:200px;
+                background-image:url(@masthead-url);
+                background-size:cover;                
+                border:thin solid @gray;
+                border-radius:4px;
+                padding:10px;
+            }
+        }
+    }
 }
 
 #layout-footer {
-    border-top:solid thin gray;
-    padding-top:20px;
-    padding-bottom:20px;
-    margin-top:20px;
+    border-top: solid thin gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+
     .zone-footer {
-        text-align:right;
+        text-align: right;
+
         .credits {
             .hide;
         }
