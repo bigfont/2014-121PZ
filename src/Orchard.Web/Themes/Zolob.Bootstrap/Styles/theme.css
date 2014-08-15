@@ -109,14 +109,12 @@ button {
   display: none;
   visibility: hidden;
 }
+#layout-navigation {
+  /* Use contain not container-fluid in the navbar */
+}
 #layout-navigation .navbar a {
   font-size: 18px;
   text-transform: uppercase;
-}
-#layout-navigation .navbar .navbar-nav {
-  float: none;
-  margin: auto;
-  max-width: 1400px;
 }
 #layout-main-container #layout-main .aside-first .widget-businesscard {
   background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg");
