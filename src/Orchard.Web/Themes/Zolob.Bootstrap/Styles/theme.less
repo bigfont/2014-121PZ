@@ -1,12 +1,12 @@
 ﻿@import "Bootstrap/less/variables.less";
-@import "Bootstrap/less/mixins.less";  
+@import "Bootstrap/less/mixins.less";
 @import "Bootstrap/less/scaffolding.less";
 
-@max-width: 1200px; 
+@max-width: 1200px;
 @masthead-url: "/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg";
- 
+
 .hide {
-    display: none; 
+    display: none;
     visibility: hidden;
 }
 
@@ -33,7 +33,7 @@ body {
     .navbar {
         a {
             font-size: 18px;
-            text-transform: uppercase; 
+            text-transform: uppercase;
         }
 
         .navbar-nav {
@@ -44,22 +44,39 @@ body {
     }
 }
 
-#layout-main-container
-{
-    #layout-main
-    {
-        .aside-first
-        {
-            .widget-businesscard
-            {
-                background-image:url(@masthead-url);
-                background-size:cover;                
-                border:thin solid @gray;
-                border-radius:4px;
-                height:200px;
-                margin:40px 0;
-                max-width:100%;
-                padding:10px;
+#layout-main-container {
+    #layout-main {
+        .aside-first {
+            .widget-businesscard {
+                background-image: url(@masthead-url);
+                background-size: cover;
+                border: thin solid @gray;
+                border-radius: 4px;
+                height: 200px;
+                margin: 40px 0;
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+
+        #layout-content {
+            .real-estate-listing {
+
+                img {
+                    clear: both;
+                    float: left;
+                    margin-right: 25px;
+                    border: thin solid gray;
+                    padding: 4px;
+                    border-radius: 4px;
+                }
+
+                p {
+                    float: left;
+                    clear: left;
+                    border-bottom: thin solid black;
+                    padding: 20px;
+                }
             }
         }
     }

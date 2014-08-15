@@ -71,6 +71,9 @@
     <Content Include="Zolob.Bootstrap\Styles\imgs\paul-zolob-silhouette.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\paul-zolob.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\sunset.jpg" />
+    <Content Include="Zolob.Bootstrap\Styles\theme.css">
+      <DependentUpon>theme.less</DependentUpon>
+    </Content>
     <Content Include="Zolob.Bootstrap\Styles\theme.min.css">
       <DependentUpon>theme.less</DependentUpon>
     </Content>
@@ -322,6 +325,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Zolob.Bootstrap\Styles\theme.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\theme.css.map">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

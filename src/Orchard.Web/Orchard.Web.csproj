@@ -41,7 +41,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
     <PackageAsSingleFile>false</PackageAsSingleFile>
   </PropertyGroup>
   <ItemGroup>
