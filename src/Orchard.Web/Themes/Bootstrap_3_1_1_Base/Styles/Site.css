@@ -797,7 +797,7 @@ output {
   padding-top: 7px;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #555555;
+  color: #000000;
 }
 .form-control {
   display: block;
@@ -806,7 +806,7 @@ output {
   padding: 6px 12px;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #555555;
+  color: #000000;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #cccccc;
