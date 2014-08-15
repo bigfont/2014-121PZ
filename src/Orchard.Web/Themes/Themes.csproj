@@ -71,6 +71,9 @@
     <Content Include="Zolob.Bootstrap\Styles\imgs\paul-zolob-silhouette.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\paul-zolob.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\sunset.jpg" />
+    <Content Include="Zolob.Bootstrap\Styles\theme.min.css">
+      <DependentUpon>theme.less</DependentUpon>
+    </Content>
     <Content Include="Zolob.Bootstrap\Web.config" />
     <Content Include="Zolob.Bootstrap\Scripts\Web.config" />
     <Content Include="Zolob.Bootstrap\Styles\Web.config" />
