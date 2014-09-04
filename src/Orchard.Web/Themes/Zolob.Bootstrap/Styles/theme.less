@@ -3,7 +3,7 @@
 @import "Bootstrap/less/scaffolding.less";
 
 @max-width: 1200px;
-@masthead-url: "/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg";
+@img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/";
 
 .hide {
     display: none;
@@ -21,13 +21,14 @@ input, button
     color:black;
 }
 
-#layout-header {
-
-    .widget-masthead {
-        background: url(@masthead-url);
-        background-size: contain;
-        background-repeat: no-repeat;
+p.text-field {
+    .name
+    {
+        .hide;
     }
+}
+
+#layout-header {
 
     #branding {
         .hide;
@@ -44,19 +45,21 @@ input, button
     }
 }
 
+#layout-featured
+{  
+    .widget-masthead-widget {
+        background: url("@{img-dir}banner-tall-768.jpg");
+        height:200px;
+        width:200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
 #layout-main-container {
     #layout-main {
         .aside-first {
-            .widget-businesscard {
-                background-image: url(@masthead-url);
-                background-size: cover;
-                border: thin solid @gray;
-                border-radius: 4px;
-                height: 200px;
-                margin: 40px 0;
-                max-width: 100%;
-                padding: 10px;
-            }
+            
         }
 
         #layout-content {
