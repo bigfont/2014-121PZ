@@ -100,10 +100,9 @@ input,
 button {
   color: black;
 }
-#layout-header .widget-masthead {
-  background: url("/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+p.text-field .name {
+  display: none;
+  visibility: hidden;
 }
 #layout-header #branding {
   display: none;
@@ -116,15 +115,26 @@ button {
   font-size: 18px;
   text-transform: uppercase;
 }
-#layout-main-container #layout-main .aside-first .widget-businesscard {
-  background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/masthead-desktop.jpg");
-  background-size: cover;
-  border: thin solid #555555;
-  border-radius: 4px;
-  height: 200px;
-  margin: 40px 0;
-  max-width: 100%;
-  padding: 10px;
+#layout-featured .widget-masthead-widget {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* Extra small devices (phones, less than 768px) */
+  /* No media query since this is the default in Bootstrap */
+  background: url("/Themes/Zolob.Bootstrap/Styles/imgs/banner-tall-768.jpg");
+  /* Small devices (tablets, 768px and up) */
+  /* Medium devices (desktops, 992px and up) */
+  /* Large devices (large desktops, 1200px and up) */
+}
+@media (min-width: 768px) {
+  #layout-featured .widget-masthead-widget {
+    background: url("/Themes/Zolob.Bootstrap/Styles/imgs/banner-tall-992.jpg");
+  }
+}
+@media (min-width: 992px) {
+  #layout-featured .widget-masthead-widget {
+    background: url("/Themes/Zolob.Bootstrap/Styles/imgs/banner-tall-1200.jpg");
+  }
 }
 #layout-main-container #layout-main #layout-content .real-estate-listing img {
   clear: both;

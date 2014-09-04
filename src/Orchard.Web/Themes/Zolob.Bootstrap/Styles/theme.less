@@ -16,18 +16,16 @@ body {
     margin: auto;
 }
 
-input, button
-{
-    color:black;
+input, button {
+    color: black;
 }
 
 p.text-field {
-    .name
-    {
+    .name {
         .hide;
     }
 }
-
+ 
 #layout-header {
 
     #branding {
@@ -45,21 +43,31 @@ p.text-field {
     }
 }
 
-#layout-featured
-{  
+#layout-featured {
     .widget-masthead-widget {
-        background: url("@{img-dir}banner-tall-768.jpg");
-        height:200px;
-        width:200px;
+        width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
+        /* Extra small devices (phones, less than 768px) */
+        /* No media query since this is the default in Bootstrap */
+        background: url("@{img-dir}banner-tall-768.jpg");
+        /* Small devices (tablets, 768px and up) */
+        @media (min-width: @screen-sm-min) {
+            background: url("@{img-dir}banner-tall-992.jpg");
+        }
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: @screen-md-min) {
+            background: url("@{img-dir}banner-tall-1200.jpg");
+        }
+        /* Large devices (large desktops, 1200px and up) */
+        @media (min-width: @screen-lg-min) {
+        }
     }
 }
 
 #layout-main-container {
     #layout-main {
         .aside-first {
-            
         }
 
         #layout-content {
