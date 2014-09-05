@@ -44,7 +44,7 @@ p.text-field {
 #layout-header {
 
     #branding {
-        .hide;
+        .hide; 
     }
 }
 
@@ -53,77 +53,8 @@ p.text-field {
     .navbar {
 
         a {
-            font-size: 18px;
+            font-size: 18px;      
             text-transform: uppercase;
-        }
-    }
-}
-
-#layout-featured {
-    // contains _masthead-splash-page.less
-}
-
-#layout-main-container {
-    #layout-main {
-
-        .aside-first {
-        }
-
-        #layout-content {
-            max-width: 800px;
-            margin: auto;
-            .box-shadow(0 0 10px @gray);
-            position: relative;
-            padding: 20px;
-            bottom: 50px;
-            background-color: white;
-
-            &::after,
-            &::before {
-                width: 50%;
-                content: ' ';
-                position: absolute;
-                background-repeat: repeat-x;
-                height: 100%;
-            }
-
-            &::after {
-                top: 0;
-                right: 0;
-                background-image: url("@{img-dir}vertical-stripes.png"), url("@{img-dir}vertical-stripes.png");
-                background-position: bottom, top;
-            }
-
-            &::before {
-                top: 0;
-                left: 0;
-                background-image: linear-gradient(red, red), linear-gradient(red, red);
-                background-size: 15px 15px;
-                background-position: bottom, top;
-            }
-
-            .zone-content > .content-item > header > h1 {
-                border-bottom: 2px solid black;
-            }
-
-            .real-estate-listing {
-
-                img {
-                    clear: both;
-                    float: left;
-                    margin-right: 25px;
-                    border: thin solid gray;
-                    padding: 4px;
-                    border-radius: 4px;
-                }
-
-                p {
-                    float: left;
-                    clear: left;
-                    border-bottom: thin solid black;
-                    padding: 20px;
-                }
-            }
         }
     }
 }
@@ -141,3 +72,4 @@ p.text-field {
         }
     }
 }
+  
