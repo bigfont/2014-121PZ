@@ -1,60 +1,59 @@
 ﻿@import "Bootstrap/less/variables.less";
 @import "Bootstrap/less/mixins.less";
 @import "Bootstrap/less/scaffolding.less";
+@import "Bootstrap/less/utilities.less";
+@import "Bootstrap/less/forms.less"; 
+@import "Bootstrap/less/navbar.less";
 
 @max-width: 1200px;
-@img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/";
+@img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/"; 
 
-@import "_masthead-splash-page.less";       
+@import "_masthead-splash-page.less";
 
 .hide {
     display: none;
     visibility: hidden;
-}                       
+}
 
 .show {
     display: block;
-    visibility: visible;                    
-}    
+    visibility: visible;
+}
 
-body {   
+body {
     padding-top: 40px;
-    margin: auto;                
-}         
+    margin: auto;
+}
 
-input, button {      
+input, button { 
     color: black;
-}     
-                            
-p.text-field {
-    .name { 
-        .hide;        
-    }              
-}   
+}
 
-#layout-header {
-      
-    #branding {
+p.text-field {
+    .name {
         .hide;
     }
-}      
+}  
+
+#layout-header {  
+
+    #branding { 
+        .hide; 
+    }
+}
 
 #layout-navigation {
     /* Use contain not container-fluid in the navbar */
-    .navbar {
-        // hack for now
-        max-height: 40px;
-        overflow: hidden;
-                     
+    .navbar {                                
+
         a {
             font-size: 18px;
             text-transform: uppercase;
         }
     }
 }
-
+  
 #layout-featured {
-    
 }
 
 #layout-main-container {
@@ -84,11 +83,11 @@ p.text-field {
         }
     }
 }
-
+ 
 #layout-footer {
     border-top: solid thin gray;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     .zone-footer {
         text-align: right;

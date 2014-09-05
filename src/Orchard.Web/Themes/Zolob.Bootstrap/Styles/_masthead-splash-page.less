@@ -6,7 +6,9 @@
 #layout-featured {
 
     div.zone-featured {
-        margin-top: -10px;
+        position: relative;
+        bottom: @navbar-height;
+        margin-bottom: -@navbar-height;        
         padding-left: 0;
         padding-right: 0;
 
@@ -108,9 +110,6 @@
     #layout-featured {
 
         div.zone-featured {
-            margin-top: -10px;
-            padding-left: 0;
-            padding-right: 0;
 
             .widget-masthead-widget {
                 background-image: url("@{img-dir}banner-tall-768.jpg");
@@ -181,9 +180,6 @@
     #layout-featured {
 
         div.zone-featured {
-            margin-top: -40px;
-            padding-left: 0;
-            padding-right: 0;
 
             .widget-masthead-widget {
                 background-image: url("@{img-dir}banner-tall-992.jpg");
@@ -191,7 +187,7 @@
                 @top: 25%;
                 @left: 30%;
                 @header-font-size: 72px;
-                @subtitle-font-size:20px;
+                @subtitle-font-size: 20px;
                 @phone-font-size: 80px;
                 @company-name-font-size: 24px;
                 @address-font-size: 14px;
@@ -216,9 +212,9 @@
 
                 .text-field-subtitle {
                     .show;
-                    top:@top;
-                    margin-top:@header-font-size;
-                    font-size:@subtitle-font-size;
+                    top: @top;
+                    margin-top: @header-font-size;
+                    font-size: @subtitle-font-size;
                 }
 
                 .text-field-phone {
@@ -229,10 +225,10 @@
 
                 .text-field-tagline {
                     .show;
-                    top:@top * 3;
-                    left:@left * 1.5;     
-                    font-size:@company-name-font-size;
-                    width:350px;
+                    top: @top * 3;
+                    left: @left * 1.5;
+                    font-size: @company-name-font-size;
+                    width: 350px;
                 }
 
                 .text-field-company-name {
@@ -261,9 +257,6 @@
 
     #layout-featured {
         div.zone-featured {
-            margin-top: -60px;
-            padding-left: 0;
-            padding-right: 0;
 
             .widget-masthead-widget {
                 background-image: url("@{img-dir}banner-tall-1200.jpg");
