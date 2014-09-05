@@ -75,6 +75,7 @@
     <Content Include="Zolob.Bootstrap\Styles\imgs\banner-tall-768.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\banner-tall-992.jpg" />
     <Content Include="Zolob.Bootstrap\Styles\imgs\royal-lepage.jpg" />
+    <Content Include="Zolob.Bootstrap\Styles\imgs\vertical-stripes.png" />
     <Content Include="Zolob.Bootstrap\Styles\theme.css">
       <DependentUpon>theme.less</DependentUpon>
     </Content>
