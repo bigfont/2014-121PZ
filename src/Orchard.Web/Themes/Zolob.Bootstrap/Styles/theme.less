@@ -11,7 +11,6 @@
 }
 
 body {
-    max-width: @max-width;
     padding-top: 40px;
     margin: auto;
 }
@@ -25,7 +24,7 @@ p.text-field {
         .hide;
     }
 }
- 
+
 #layout-header {
 
     #branding {
@@ -36,6 +35,10 @@ p.text-field {
 #layout-navigation {
     /* Use contain not container-fluid in the navbar */
     .navbar {
+        // hack for now
+        max-height: 40px;
+        overflow: hidden;
+
         a {
             font-size: 18px;
             text-transform: uppercase;
@@ -44,23 +47,83 @@ p.text-field {
 }
 
 #layout-featured {
+
+    @header-height: 55px;
+    @subtitle-height: 15px;
+
     .widget-masthead-widget {
-        width: 100%;
-        background-size: contain;
         background-repeat: no-repeat;
-        /* Extra small devices (phones, less than 768px) */
-        /* No media query since this is the default in Bootstrap */
-        background: url("@{img-dir}banner-tall-768.jpg");
-        /* Small devices (tablets, 768px and up) */
+        background-size: cover;
+        position: relative;
+        width: 100%;
+
+        header,
+        .text-field-subtitle,
+        .text-field-phone {
+            color: black;
+            left: 30%;
+            top: 30%;
+            position: absolute;
+            text-transform: uppercase;
+        }
+
+        header {
+            h1 {
+                font-size: 54px;
+                line-height: 1;
+                margin: 0;
+                padding: 0;
+            }
+
+            height: @header-height;
+            border-bottom: 2px solid black;
+            margin: 0;
+            padding: 0;
+            top: 30%;
+            width: 60%;
+        }
+
+        .text-field-subtitle {
+            font-weight: 700;
+            margin-top: @header-height;
+            height: @subtitle-height;
+        }
+
+        .text-field-phone {
+            font-weight: 700;
+            margin-top: @subtitle-height + @header-height;
+            font-size: 36px;
+        }
+
+        background-image: url("@{img-dir}banner-tall-768.jpg");
+
         @media (min-width: @screen-sm-min) {
-            background: url("@{img-dir}banner-tall-992.jpg");
+            // use the 768
         }
-        /* Medium devices (desktops, 992px and up) */
+
         @media (min-width: @screen-md-min) {
-            background: url("@{img-dir}banner-tall-1200.jpg");
+            background-image: url("@{img-dir}banner-tall-992.jpg");
         }
-        /* Large devices (large desktops, 1200px and up) */
+
         @media (min-width: @screen-lg-min) {
+            background-image: url("@{img-dir}banner-tall-1200.jpg");
+
+            .text-field {
+            }
+
+
+
+            .text-field-phone {
+            }
+
+            .text-field-tagline {
+            }
+
+            .text-field-address {
+            }
+
+            .text-field-company-name {
+            }
         }
     }
 }

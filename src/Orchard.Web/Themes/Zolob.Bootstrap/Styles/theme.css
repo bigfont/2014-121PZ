@@ -1,4 +1,4 @@
-﻿* {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -136,6 +136,14 @@ p.text-field .name {
     background: url("/Themes/Zolob.Bootstrap/Styles/imgs/banner-tall-1200.jpg");
   }
 }
+@media (min-width: 1200px) {
+  #layout-featured .widget-masthead-widget header h2 {
+    color: black !important;
+  }
+  #layout-featured .widget-masthead-widget .text-field {
+    color: white;
+  }
+}
 #layout-main-container #layout-main #layout-content .real-estate-listing img {
   clear: both;
   float: left;
@@ -163,4 +171,3 @@ p.text-field .name {
   display: none;
   visibility: hidden;
 }
-/*# sourceMappingURL=theme.css.map */
