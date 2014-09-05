@@ -1,17 +1,31 @@
-﻿<script>
+﻿@Display(Model.Content)
 
-    $(function () {
-        var masthead = $(".widget-masthead-widget");
-        var width = masthead.width();
-        var height = width * 700 / 1200;
 
-        $(window).resize(function () {
-            masthead.height(height);
+@*Add javascript to foot.*@
+@using (Script.Foot())
+{
+    <script type="text/javascript">
+
+        //<![CDATA[
+        $(function () {
+
+            var maintainAspectRatio = function(element, ratio)
+            {
+                var width = element.width();
+                var height = width * ratio;
+                element.height(height);
+            }
+
+            var masthead = $(".widget-masthead-widget");
+
+            $(window).resize(function () {
+                maintainAspectRatio(masthead, 755 / 1200);
+            });
+
+            $(window).resize();
         });
+        //]]>
 
-        $(window).resize();
-    });
+    </script>
 
-</script>
-
-@Display(Model.Content)
+}

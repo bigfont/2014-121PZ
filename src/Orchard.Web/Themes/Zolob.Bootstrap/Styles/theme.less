@@ -5,32 +5,34 @@
 @max-width: 1200px;
 @img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/";
 
+@import "_masthead-splash-page.less";       
+
 .hide {
     display: none;
     visibility: hidden;
-}
+}                       
 
-body {
+body {   
     padding-top: 40px;
-    margin: auto;
-}
+    margin: auto;                
+}         
 
-input, button {
+input, button {      
     color: black;
-}
-
+}     
+                    
 p.text-field {
     .name {
-        .hide;
+        .hide;        
     }
-}
+}   
 
 #layout-header {
 
     #branding {
         .hide;
     }
-}
+}      
 
 #layout-navigation {
     /* Use contain not container-fluid in the navbar */
@@ -38,7 +40,7 @@ p.text-field {
         // hack for now
         max-height: 40px;
         overflow: hidden;
-
+                     
         a {
             font-size: 18px;
             text-transform: uppercase;
@@ -46,126 +48,8 @@ p.text-field {
     }
 }
 
-#layout-featured.group {
-    // heights
-    @header-height: 58px;
-    @subtitle-height: 15px;
-    @bottom-margin: 10px;
-
-    // fonts
-    @header-font-size: 54px;
-    @phone-font-size: 36px;
-
-    > div.zone-featured {
-        bottom: 60px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .widget-masthead-widget {
-        background-image: url("@{img-dir}banner-tall-768.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-
-        header,
-        .text-field {
-            position: absolute;
-        }
-
-        header,
-        .text-field-subtitle,
-        .text-field-phone {
-            line-height: 1;
-            color: black;
-            left: 30%;
-            top: 30%;
-            text-transform: uppercase;
-            margin-bottom: @bottom-margin;
-        }
-
-        header {
-
-            h1 {
-                font-size: @header-font-size;
-                line-height: 1;
-                margin: 0 @bottom-margin 0 0;
-            }
-
-            height: @header-height;
-            border-bottom: 2px solid black;
-            width: 60%;
-        }
-
-        .text-field-subtitle {
-            font-weight: 700;
-            margin-top: @header-height + @bottom-margin;
-            height: @subtitle-height;
-        }
-
-        .text-field-phone {
-            font-weight: 700;
-            margin-top: @subtitle-height + @header-height + (2 * @bottom-margin);
-            font-size: 36px;
-        }
-
-        .text-field-tagline {
-            font-size: 36px;
-            left: 40%;
-            width: 450px;
-            bottom: 8%;
-        }
-
-        .text-field-company-name {
-            right: 0;
-            bottom: 16px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-
-        .text-field-address {
-            right: 0;
-            bottom: 0;
-            font-size: 12px;
-        }
-
-        @media (min-width: @screen-sm-min) {
-            // use the 768
-        }
-
-        @media (min-width: @screen-md-min) {
-            background-image: url("@{img-dir}banner-tall-992.jpg");
-        }
-
-        @media (min-width: @screen-lg-min) {
-            background-image: url("@{img-dir}banner-tall-1200.jpg");
-
-            header {
-                h1 {
-                }
-            }
-
-            .text-field {
-            }
-
-            .text-field-subtitle {
-            }
-
-            .text-field-phone {
-            }
-
-
-            .text-field-tagline {
-            }
-
-            .text-field-address {
-            }
-
-            .text-field-company-name {
-            }
-        }
-    }
+#layout-featured {
+    
 }
 
 #layout-main-container {
@@ -198,9 +82,8 @@ p.text-field {
 
 #layout-footer {
     border-top: solid thin gray;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     .zone-footer {
         text-align: right;
@@ -210,3 +93,4 @@ p.text-field {
         }
     }
 }
+    

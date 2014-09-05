@@ -1,0 +1,319 @@
+﻿#layout-featured {
+
+    header {
+        outline: thin solid red;
+    }
+
+    div.zone-featured {
+        margin-top: -10px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .widget-masthead-widget {
+            background-image: url("@{img-dir}banner-tall-768.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+
+            @top: 22.5%;
+            @left: 27.5%;
+            @header-font-size: 30px;
+            @phone-font-size: 34px;
+            @company-name-font-size: 20px;
+            @address-font-size: 12px;
+            @bottom: 1%;
+            @right: 0.5%;
+
+            header,
+            .text-field {
+                position: absolute;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+
+            header,
+            .text-field-subtitle,
+            .text-field-phone {
+                line-height: 1;
+                color: black;
+                left: @left;
+                top: @top;
+                text-transform: uppercase;
+            }
+
+            header {
+
+                h1 {
+                    font-size: @header-font-size;
+                    line-height: 1;
+                    margin: 0;
+                }
+
+                height: @header-font-size;
+                border-bottom: 2px solid black;
+                width: 60%;
+            }
+
+            .text-field-subtitle {
+                .hide;
+            }
+
+            .text-field-phone {
+                font-weight: 700;
+                top: @top;
+                margin-top: @header-font-size;
+                font-size: @phone-font-size;
+            }
+
+            .text-field-tagline {
+                .hide;
+            }
+
+            .text-field-company-name {
+                right: @right;
+                bottom: @bottom;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: @company-name-font-size;
+                margin-bottom:@address-font-size * 2;
+            }
+
+            .text-field-company-name::after {
+                background-image: url("@{img-dir}royal-lepage.jpg");
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: ' ';
+                display: inline-block;
+                height: @company-name-font-size;
+                width: @company-name-font-size * 2.5; // this is sufficient
+            }
+
+            .text-field-address {
+                right: @right;
+                bottom: @bottom;
+                font-size: @address-font-size;
+                text-align: right;
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+
+    #layout-featured {
+
+        header {
+            outline: thin solid orange;
+        }
+
+        div.zone-featured {
+            margin-top: -10px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .widget-masthead-widget {
+                background-image: url("@{img-dir}banner-tall-768.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+
+                @top: 25%;
+                @left: 27.5%;
+                @header-font-size: 36px;
+                @phone-font-size: 40px;
+                @company-name-font-size: 20px;
+                @address-font-size: 12px;
+                @bottom: 4%;
+                @right: 4%;
+
+                header,
+                .text-field {
+                    position: absolute;
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                header,
+                .text-field-subtitle,
+                .text-field-phone {
+                    line-height: 1;
+                    color: black;
+                    left: @left;
+                    top: @top;
+                    text-transform: uppercase;
+                }
+
+                header {
+
+                    h1 {
+                        font-size: @header-font-size;
+                        line-height: 1;
+                        margin: 0;
+                    }
+
+                    height: @header-font-size;
+                    border-bottom: 2px solid black;
+                    width: 60%;
+                }
+
+                .text-field-subtitle {
+                    .hide;
+                }
+
+                .text-field-phone {
+                    font-weight: 700;
+                    top: @top;
+                    margin-top: @header-font-size;
+                    font-size: @phone-font-size;
+                }
+
+                .text-field-tagline {
+                    .hide;
+                }
+
+                .text-field-company-name {
+                    right: @right;
+                    bottom: @bottom;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: @company-name-font-size;
+                    margin-bottom: @address-font-size * 2;
+                }
+
+                .text-field-company-name::after {
+                    background-image: url("@{img-dir}royal-lepage.jpg");
+                    background-position: bottom right;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    content: ' ';
+                    display: inline-block;
+                    height: @company-name-font-size;
+                    width: @company-name-font-size * 2.5; // this is sufficient
+                }
+
+                .text-field-address {
+                    right: @right;
+                    bottom: @bottom;
+                    font-size: @address-font-size;
+                    text-align: right;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .widget-masthead-widget {
+        background-image: url("@{img-dir}banner-tall-992.jpg");
+    }
+}
+
+@media (min-width: @screen-lg-min) {
+
+    div.zone-featured {
+        margin-top: -60px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .widget-masthead-widget {
+            background-image: url("@{img-dir}banner-tall-1200.jpg");
+            /*header,
+            .text-field-subtitle,
+            .text-field-phone {
+                line-height: 1;
+                color: black;
+                left: 30%;
+                top: 30%;
+                text-transform: uppercase;
+                margin-bottom: @bottom-margin;
+            }*/
+            /*header {
+
+                h1 {
+                    font-size: @header-font-size;
+                    line-height: 1;
+                    margin: 0 @bottom-margin 0 0;
+                }
+
+                height: @header-height;
+                border-bottom: 2px solid black;
+                width: 60%;
+            }*/
+            /*.text-field-subtitle {
+                font-weight: 700;
+                margin-top: @header-height + @bottom-margin;
+                height: @subtitle-height;
+            }
+
+            .text-field-phone {
+                font-weight: 700;
+                margin-top: @subtitle-height + @header-height + (2 * @bottom-margin);
+                font-size: 36px;
+            }*/
+            .text-field-tagline {
+                font-size: 36px;
+                left: 40%;
+                width: 450px;
+                top: 73%;
+            }
+
+            .text-field-company-name {
+                right: 8%;
+                bottom: 16px;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 30px;
+            }
+
+            &::after {
+                background-image: url("@{img-dir}royal-lepage.jpg");
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                bottom: 30px;
+                content: '';
+                height: 100%; // this can be anything large
+                position: absolute;
+                right: .5%;
+                width: 7%;
+            }
+
+            .text-field-address {
+                right: .5%;
+                bottom: 0;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/*
+header {
+    h1 {
+    }
+}
+
+.text-field {
+}
+
+.text-field-subtitle {
+}
+
+.text-field-phone {
+}
+
+
+.text-field-tagline {
+}
+
+.text-field-address {
+}
+
+.text-field-company-name {
+}
+*/
