@@ -46,7 +46,7 @@ p.text-field {
     }
 }
 
-#layout-featured {
+#layout-featured.group {
     // heights
     @header-height: 58px;
     @subtitle-height: 15px;
@@ -56,12 +56,16 @@ p.text-field {
     @header-font-size: 54px;
     @phone-font-size: 36px;
 
+    > div.zone-featured {
+        bottom: 60px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .widget-masthead-widget {
         background-image: url("@{img-dir}banner-tall-768.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
         width: 100%;
 
         header,
@@ -123,7 +127,7 @@ p.text-field {
         .text-field-address {
             right: 0;
             bottom: 0;
-            font-size:12px;
+            font-size: 12px;
         }
 
         @media (min-width: @screen-sm-min) {
