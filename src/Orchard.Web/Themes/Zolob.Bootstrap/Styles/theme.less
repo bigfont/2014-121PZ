@@ -2,14 +2,20 @@
 @import "Bootstrap/less/mixins.less";
 @import "Bootstrap/less/scaffolding.less";
 @import "Bootstrap/less/utilities.less";
-@import "Bootstrap/less/forms.less"; 
+@import "Bootstrap/less/forms.less";
 @import "Bootstrap/less/navbar.less";
 
 @max-width: 1200px;
-@img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/"; 
+@img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/";
 
-@import "_masthead-splash-page.less";
+@import "_masthead-splash-page.less";   
+@import "_masthead-detail-page.less";
 
+.lepage(@base-size) {
+    height: @base-size * 1.5;
+    width: @base-size * 4; // this is sufficient
+} 
+ 
 .hide {
     display: none;
     visibility: hidden;
@@ -25,7 +31,7 @@ body {
     margin: auto;
 }
 
-input, button { 
+input, button {
     color: black;
 }
 
@@ -33,18 +39,18 @@ p.text-field {
     .name {
         .hide;
     }
-}  
+}
 
-#layout-header {  
+#layout-header {
 
-    #branding { 
-        .hide; 
+    #branding {
+        .hide;
     }
 }
 
 #layout-navigation {
     /* Use contain not container-fluid in the navbar */
-    .navbar {                                
+    .navbar {
 
         a {
             font-size: 18px;
@@ -52,8 +58,9 @@ p.text-field {
         }
     }
 }
-  
+
 #layout-featured {
+    // contains _masthead-splash-page.less
 }
 
 #layout-main-container {
@@ -83,7 +90,7 @@ p.text-field {
         }
     }
 }
- 
+
 #layout-footer {
     border-top: solid thin gray;
     padding-top: 20px;
@@ -97,4 +104,3 @@ p.text-field {
         }
     }
 }
-    

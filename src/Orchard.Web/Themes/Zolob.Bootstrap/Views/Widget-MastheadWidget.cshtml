@@ -9,17 +9,27 @@
         //<![CDATA[
         $(function () {
 
-            var maintainAspectRatio = function(element, ratio)
-            {
+            var masthead,
+                maintainAspectRation,
+                aspectRatio;
+
+            maintainAspectRatio = function (element, heightDividedByWidth) {
                 var width = element.width();
-                var height = width * ratio;
+                var height = width * heightDividedByWidth;
                 element.height(height);
             }
 
-            var masthead = $(".widget-masthead-widget");
+            // if we're on the splash page, use this aspect ratio
+            masthead = $(".detail-splash-page .widget-masthead-widget");
+            aspectRatio = 755 / 1200;
+            // otherwise, use another aspect ratio
+            if (!masthead[0]) {
+                masthead = $(".widget-masthead-widget");
+                aspectRatio = 200 / 1200;
+            }
 
             $(window).resize(function () {
-                maintainAspectRatio(masthead, 755 / 1200);
+                maintainAspectRatio(masthead, aspectRatio);
             });
 
             $(window).resize();

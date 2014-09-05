@@ -1,4 +1,5 @@
-﻿.detail-splash-page {
+﻿.detail-page,
+.detail-projection-page {
 
     #layout-featured {
 
@@ -10,7 +11,7 @@
             padding-right: 0;
 
             .widget-masthead-widget {
-                background-image: url("@{img-dir}banner-tall-768.jpg");
+                background-image: url("@{img-dir}banner-short-768.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
@@ -109,7 +110,7 @@
             div.zone-featured {
 
                 .widget-masthead-widget {
-                    background-image: url("@{img-dir}banner-tall-768.jpg");
+                    background-image: url("@{img-dir}banner-short-768.jpg");
 
                     @top: 25%;
                     @left: 27.5%;
@@ -179,7 +180,7 @@
             div.zone-featured {
 
                 .widget-masthead-widget {
-                    background-image: url("@{img-dir}banner-tall-992.jpg");
+                    background-image: url("@{img-dir}banner-short-992.jpg");
 
                     @top: 25%;
                     @left: 30%;
@@ -207,25 +208,10 @@
                         height: @header-font-size;
                     }
 
-                    .text-field-subtitle {
-                        .show;
-                        top: @top;
-                        margin-top: @header-font-size;
-                        font-size: @subtitle-font-size;
-                    }
-
                     .text-field-phone {
                         top: @top;
-                        margin-top: @header-font-size + @subtitle-font-size;
+                        margin-top: @header-font-size;
                         font-size: @phone-font-size;
-                    }
-
-                    .text-field-tagline {
-                        .show;
-                        top: @top * 3;
-                        left: @left * 1.5;
-                        font-size: @company-name-font-size;
-                        width: 350px;
                     }
 
                     .text-field-company-name {
@@ -256,7 +242,7 @@
             div.zone-featured {
 
                 .widget-masthead-widget {
-                    background-image: url("@{img-dir}banner-tall-1200.jpg");
+                    background-image: url("@{img-dir}banner-short-1200.jpg");
                 }
             }
         }

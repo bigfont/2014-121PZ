@@ -342,6 +342,9 @@
     <Content Include="Zolob.Bootstrap\Views\Widget-MastheadWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\_masthead-detail-page.less" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Zolob.Bootstrap\Styles\_masthead-splash-page.less" />
   </ItemGroup>
   <PropertyGroup>
