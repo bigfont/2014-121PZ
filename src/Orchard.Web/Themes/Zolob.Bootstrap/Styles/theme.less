@@ -47,55 +47,84 @@ p.text-field {
 }
 
 #layout-featured {
-
-    @header-height: 55px;
+    // heights
+    @header-height: 58px;
     @subtitle-height: 15px;
+    @bottom-margin: 10px;
+
+    // fonts
+    @header-font-size: 54px;
+    @phone-font-size: 36px;
+
 
     .widget-masthead-widget {
+        background-image: url("@{img-dir}banner-tall-768.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         width: 100%;
 
         header,
+        .text-field {
+            position: absolute;
+        }
+
+        header,
         .text-field-subtitle,
         .text-field-phone {
+            line-height: 1;
             color: black;
             left: 30%;
             top: 30%;
-            position: absolute;
             text-transform: uppercase;
+            margin-bottom: @bottom-margin;
         }
 
         header {
+
             h1 {
-                font-size: 54px;
+                font-size: @header-font-size;
                 line-height: 1;
-                margin: 0;
-                padding: 0;
+                margin: 0 @bottom-margin 0 0;
             }
 
             height: @header-height;
             border-bottom: 2px solid black;
-            margin: 0;
-            padding: 0;
-            top: 30%;
             width: 60%;
         }
 
         .text-field-subtitle {
             font-weight: 700;
-            margin-top: @header-height;
+            margin-top: @header-height + @bottom-margin;
             height: @subtitle-height;
         }
 
         .text-field-phone {
             font-weight: 700;
-            margin-top: @subtitle-height + @header-height;
+            margin-top: @subtitle-height + @header-height + (2 * @bottom-margin);
             font-size: 36px;
         }
 
-        background-image: url("@{img-dir}banner-tall-768.jpg");
+        .text-field-tagline {
+            font-size: 36px;
+            left: 40%;
+            width: 450px;
+            bottom: 8%;
+        }
+
+        .text-field-company-name {
+            right: 0;
+            bottom: 16px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+
+        .text-field-address {
+            right: 0;
+            bottom: 0;
+            font-size:12px;
+        }
 
         @media (min-width: @screen-sm-min) {
             // use the 768
@@ -108,13 +137,20 @@ p.text-field {
         @media (min-width: @screen-lg-min) {
             background-image: url("@{img-dir}banner-tall-1200.jpg");
 
+            header {
+                h1 {
+                }
+            }
+
             .text-field {
             }
 
-
+            .text-field-subtitle {
+            }
 
             .text-field-phone {
             }
+
 
             .text-field-tagline {
             }
