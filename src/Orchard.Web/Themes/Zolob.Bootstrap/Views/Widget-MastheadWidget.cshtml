@@ -1,0 +1,17 @@
+﻿<script>
+
+    $(function () {
+        var masthead = $(".widget-masthead-widget");
+        var width = masthead.width();
+        var height = width * 700 / 1200;
+
+        $(window).resize(function () {
+            masthead.height(height);
+        });
+
+        $(window).resize();
+    });
+
+</script>
+
+@Display(Model.Content)
