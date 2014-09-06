@@ -17,10 +17,11 @@
                 background-size: cover;
                 width: 100%;
 
-                @top: 20%;
+                @top: 30%;
                 @left: 25%;
                 @header-font-size: 30px;
-                @phone-font-size: 34px;
+                @header-width: 200px;
+                @phone-font-size: 24px;
                 @company-name-font-size: 20px;
                 @address-font-size: 12px;
                 @bottom: 1%;
@@ -61,10 +62,10 @@
                 }
 
                 .text-field-phone {
-                    font-weight: 700;
                     top: @top;
-                    margin-top: @header-font-size;
+                    margin-top: @header-font-size - @phone-font-size - 2px;
                     font-size: @phone-font-size;
+                    margin-left: @header-width;
                 }
 
                 .text-field-tagline {
@@ -98,7 +99,7 @@
                     margin-top: 0;
                     background-image: url("@{img-dir}banner-short-768.jpg");
 
-                    @top: 25%;
+                    @top: 30%;
                     @left: 27.5%;
                     @header-font-size: 36px;
                     @header-width: 230px;
