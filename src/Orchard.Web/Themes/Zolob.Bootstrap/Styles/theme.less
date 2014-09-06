@@ -8,22 +8,22 @@
 @max-width: 1200px;
 @img-dir: "/Themes/Zolob.Bootstrap/Styles/imgs/";
 
-@import "_masthead-splash-page.less";
-@import "_masthead-detail-page.less";
+@import "_splash-page.less";
+@import "_content-page.less";
 
 .lepage(@base-size) {
-    height: @base-size * 1.5;
+    height: @base-size * 1.5;   
     width: @base-size * 4; // this is sufficient
 }
 
-.hide {
+.hide {      
     display: none;
     visibility: hidden;
 }
 
 .show {
     display: block;
-    visibility: visible;
+    visibility: visible;   
 }
 
 body {
@@ -32,19 +32,29 @@ body {
 }
 
 input, button {
-    color: black;
+    color: black;   
 }
 
 p.text-field {
     .name {
         .hide;
-    }
-}
+    }                
+}  
 
 #layout-header {
 
     #branding {
-        .hide; 
+        .hide;
+    }
+}
+ 
+#layout-featured { 
+    .widget-masthead-widget {
+        .text-field-tagline,   
+        .text-field-company-name,
+        .text-field-address {
+            color: white;
+        }
     }
 }
 
@@ -53,7 +63,7 @@ p.text-field {
     .navbar {
 
         a {
-            font-size: 18px;        
+            font-size: 18px;
             text-transform: uppercase;
         }
     }
@@ -72,4 +82,3 @@ p.text-field {
         }
     }
 }
-  

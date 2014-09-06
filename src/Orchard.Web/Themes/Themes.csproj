@@ -343,10 +343,10 @@
     <Content Include="Zolob.Bootstrap\Views\Widget-MastheadWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Zolob.Bootstrap\Styles\_masthead-detail-page.less" />
+    <Content Include="Zolob.Bootstrap\Styles\_content-page.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Zolob.Bootstrap\Styles\_masthead-splash-page.less" />
+    <Content Include="Zolob.Bootstrap\Styles\_splash-page.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
