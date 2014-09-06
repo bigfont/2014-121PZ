@@ -95,13 +95,14 @@
             @media (min-width: @screen-sm-min) {
 
                 .widget-masthead-widget {
-                    margin-top:0;
+                    margin-top: 0;
                     background-image: url("@{img-dir}banner-short-768.jpg");
 
                     @top: 25%;
                     @left: 27.5%;
                     @header-font-size: 36px;
-                    @phone-font-size: 40px;
+                    @header-width: 230px;
+                    @phone-font-size: 24px;
                     @company-name-font-size: 20px;
                     @address-font-size: 12px;
                     @bottom: 4%;
@@ -129,8 +130,9 @@
 
                     .text-field-phone {
                         top: @top;
-                        margin-top: @header-font-size;
+                        margin-top: @header-font-size - @phone-font-size - 2px;
                         font-size: @phone-font-size;
+                        margin-left: @header-width;
                     }
 
                     .text-field-tagline {
@@ -138,21 +140,11 @@
                     }
 
                     .text-field-company-name {
-                        right: @right;
-                        bottom: @bottom;
-                        font-size: @company-name-font-size;
-                        margin-bottom: @address-font-size * 2;
-                    }
-
-                    .text-field-company-name::after {
-                        .lepage(@company-name-font-size);
+                        .hide;
                     }
 
                     .text-field-address {
-                        right: @right;
-                        bottom: @bottom;
-                        font-size: @address-font-size;
-                        width: 50%;
+                        .hide;
                     }
                 }
             }
