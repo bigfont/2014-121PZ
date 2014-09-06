@@ -3,17 +3,9 @@
     #layout-featured {
 
         div.zone-featured {
-            position: relative;
-            bottom: @navbar-height;
-            margin-bottom: -@navbar-height;
-            padding-left: 0;
-            padding-right: 0;
 
             .widget-masthead-widget {
                 background-image: url("@{img-dir}banner-tall-768.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
 
                 @top: 22.5%;
                 @left: 27.5%;
@@ -25,69 +17,39 @@
                 @right: 0.5%;
 
                 header,
-                .text-field {
-                    position: absolute;
-                    overflow: hidden;
-                    margin: 0;
-                    padding: 0;
-                }
-
-                header,
                 .text-field-subtitle,
                 .text-field-phone {
-                    line-height: 1;
                     left: @left;
                     top: @top;
-                    text-transform: uppercase;
                 }
 
                 header {
 
                     h1 {
                         font-size: @header-font-size;
-                        line-height: 1;
-                        margin: 0;
                     }
 
                     height: @header-font-size;
-                    border-bottom: 2px solid black;
-                    width: 60%;
-                }
-
-                .text-field-subtitle {
-                    .hide;
                 }
 
                 .text-field-phone {
-                    font-weight: 700;
                     top: @top;
                     margin-top: @header-font-size;
                     font-size: @phone-font-size;
                 }
 
-                .text-field-tagline {
-                    .hide;
-                }
-
                 .text-field-company-name {
-                    right: @right;
+
                     bottom: @bottom;
-                    text-transform: uppercase;
-                    font-weight: 700;
                     font-size: @company-name-font-size;
-                    margin-bottom: @address-font-size * 2;
+                    font-weight: 700;
+                    margin-bottom: @address-font-size * 2.75;
+                    right: @right;
                 }
 
                 .text-field-company-name::after {
-                    background-image: url("@{img-dir}royal-lepage.jpg");
-                    background-position: bottom right;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    content: ' ';
-                    display: inline-block;
+
                     .lepage(@company-name-font-size);
-                    position: relative;
-                    top: 2px;
                 }
 
                 .text-field-address {
@@ -95,13 +57,13 @@
                     bottom: @bottom;
                     font-size: @address-font-size;
                     text-align: right;
-                    width: 75%;
                 }
             }
 
             @media (min-width: @screen-sm-min) {
 
                 .widget-masthead-widget {
+                    margin-top: 0;
                     background-image: url("@{img-dir}banner-tall-768.jpg");
 
                     @top: 25%;
@@ -158,7 +120,6 @@
                         right: @right;
                         bottom: @bottom;
                         font-size: @address-font-size;
-                        width: 50%;
                     }
                 }
             }
@@ -230,7 +191,6 @@
                         right: @right;
                         bottom: @bottom;
                         font-size: @address-font-size;
-                        width: 50%;
                     }
                 }
             }

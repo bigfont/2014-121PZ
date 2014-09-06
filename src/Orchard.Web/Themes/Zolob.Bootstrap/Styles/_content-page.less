@@ -6,21 +6,14 @@
     #layout-featured {
 
         div.zone-featured {
-            position: relative;
-            padding-left: 0;
-            padding-right: 0;
 
             .widget-masthead-widget {
-                margin-top: 52px;
                 background-image: url("@{img-dir}banner-short-768.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
 
                 @top: 30%;
                 @left: 25%;
                 @header-font-size: 30px;
-                @header-width: 200px;
+                @header-width: 150px;
                 @phone-font-size: 24px;
                 @company-name-font-size: 20px;
                 @address-font-size: 12px;
@@ -28,37 +21,19 @@
                 @right: 0.5%;
 
                 header,
-                .text-field {
-                    position: absolute;
-                    overflow: hidden;
-                    margin: 0;
-                    padding: 0;
-                }
-
-                header,
                 .text-field-subtitle,
                 .text-field-phone {
-                    line-height: 1;
                     left: @left;
                     top: @top;
-                    text-transform: uppercase;
                 }
 
                 header {
 
                     h1 {
                         font-size: @header-font-size;
-                        line-height: 1;
-                        margin: 0;
                     }
 
                     height: @header-font-size;
-                    border-bottom: 2px solid black;
-                    width: 60%;
-                }
-
-                .text-field-subtitle {
-                    .hide;
                 }
 
                 .text-field-phone {
@@ -68,24 +43,8 @@
                     margin-left: @header-width;
                 }
 
-                .text-field-tagline {
-                    .hide;
-                }
-
                 .text-field-company-name {
                     .hide;
-                }
-
-                .text-field-company-name::after {
-                    background-image: url("@{img-dir}royal-lepage.jpg");
-                    background-position: bottom right;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    content: ' ';
-                    display: inline-block;
-                    .lepage(@company-name-font-size);
-                    position: relative;
-                    top: 2px;
                 }
 
                 .text-field-address {
@@ -102,7 +61,7 @@
                     @top: 30%;
                     @left: 27.5%;
                     @header-font-size: 36px;
-                    @header-width: 230px;
+                    @header-width: 180px;
                     @phone-font-size: 24px;
                     @company-name-font-size: 20px;
                     @address-font-size: 12px;
@@ -158,13 +117,13 @@
                     @top: 30%;
                     @left: 25%;
                     @header-font-size: 54px;
-                    @header-width: 350px;
+                    @header-width: 270px;
                     @subtitle-font-size: 12px;
                     @phone-font-size: 26px;
-                    @company-name-font-size: 24px;
+                    @company-name-font-size: 20px;
                     @address-font-size: 14px;
-                    @bottom: 8%;
-                    @right: 5%;
+                    @bottom: 2%;
+                    @right: 2%;
 
                     header,
                     .text-field-subtitle,
@@ -197,10 +156,13 @@
                     }
 
                     .text-field-company-name {
-                        right: @right;
+
+                        .show(inline-block);
+
                         bottom: @bottom;
                         font-size: @company-name-font-size;
-                        margin-bottom: @address-font-size * 2;
+                        margin-bottom: @address-font-size * 1.5;
+                        right: @right;
                     }
 
                     .text-field-company-name::after {
@@ -208,10 +170,12 @@
                     }
 
                     .text-field-address {
+                        .show;
                         right: @right;
                         bottom: @bottom;
                         font-size: @address-font-size;
                         width: 50%;
+                        text-align: right;
                     }
                 }
             }
@@ -224,7 +188,7 @@
                     @top: 30%;
                     @left: 25%;
                     @header-font-size: 54px;
-                    @header-width: 350px;
+                    @header-width: 270px;
                     @subtitle-font-size: 12px;
                     @phone-font-size: 26px;
                     @company-name-font-size: 24px;
