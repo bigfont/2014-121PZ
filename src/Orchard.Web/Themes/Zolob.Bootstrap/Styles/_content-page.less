@@ -7,12 +7,11 @@
 
         div.zone-featured {
             position: relative;
-            bottom: @navbar-height;
-            margin-bottom: -@navbar-height;
             padding-left: 0;
             padding-right: 0;
 
             .widget-masthead-widget {
+                margin-top: 52px;
                 background-image: url("@{img-dir}banner-short-768.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -73,12 +72,7 @@
                 }
 
                 .text-field-company-name {
-                    right: @right;
-                    bottom: @bottom;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                    font-size: @company-name-font-size;
-                    margin-bottom: @address-font-size * 2;
+                    .hide;
                 }
 
                 .text-field-company-name::after {
@@ -94,17 +88,14 @@
                 }
 
                 .text-field-address {
-                    right: @right;
-                    bottom: @bottom;
-                    font-size: @address-font-size;
-                    text-align: right;
-                    width: 75%;
+                    .hide;
                 }
             }
 
             @media (min-width: @screen-sm-min) {
 
                 .widget-masthead-widget {
+                    margin-top:0;
                     background-image: url("@{img-dir}banner-short-768.jpg");
 
                     @top: 25%;
@@ -171,16 +162,16 @@
                 .widget-masthead-widget {
                     background-image: url("@{img-dir}banner-short-992.jpg");
 
-                    @top: 20%;
-                    @left: 30%;
-                    @header-font-size: 72px;
-                    @header-width: 460px;
-                    @subtitle-font-size: 20px;
-                    @phone-font-size: 40px;
+                    @top: 30%;
+                    @left: 25%;
+                    @header-font-size: 54px;
+                    @header-width: 350px;
+                    @subtitle-font-size: 12px;
+                    @phone-font-size: 26px;
                     @company-name-font-size: 24px;
                     @address-font-size: 14px;
-                    @bottom: 3%;
-                    @right: 3%;
+                    @bottom: 8%;
+                    @right: 5%;
 
                     header,
                     .text-field-subtitle,
@@ -200,13 +191,14 @@
 
                     .text-field-subtitle {
                         .show;
-                        margin-top: 5px;
+                        margin-top: 10px;
                         margin-left: @header-width;
                         font-size: @subtitle-font-size;
+                        font-weight: 700;
                     }
 
                     .text-field-phone {
-                        margin-top: @subtitle-font-size + 5px;
+                        margin-top: @subtitle-font-size + 10px;
                         margin-left: @header-width;
                         font-size: @phone-font-size;
                     }
@@ -235,6 +227,65 @@
 
                 .widget-masthead-widget {
                     background-image: url("@{img-dir}banner-short-1200.jpg");
+
+                    @top: 30%;
+                    @left: 25%;
+                    @header-font-size: 54px;
+                    @header-width: 350px;
+                    @subtitle-font-size: 12px;
+                    @phone-font-size: 26px;
+                    @company-name-font-size: 24px;
+                    @address-font-size: 14px;
+                    @bottom: 8%;
+                    @right: 5%;
+
+                    header,
+                    .text-field-subtitle,
+                    .text-field-phone {
+                        left: @left;
+                        top: @top;
+                    }
+
+                    header {
+
+                        h1 {
+                            font-size: @header-font-size;
+                        }
+
+                        height: @header-font-size;
+                    }
+
+                    .text-field-subtitle {
+                        .show;
+                        margin-top: 10px;
+                        margin-left: @header-width;
+                        font-size: @subtitle-font-size;
+                        font-weight: 700;
+                    }
+
+                    .text-field-phone {
+                        margin-top: @subtitle-font-size + 10px;
+                        margin-left: @header-width;
+                        font-size: @phone-font-size;
+                    }
+
+                    .text-field-company-name {
+                        right: @right;
+                        bottom: @bottom;
+                        font-size: @company-name-font-size;
+                        margin-bottom: @address-font-size * 2;
+                    }
+
+                    .text-field-company-name::after {
+                        .lepage(@company-name-font-size);
+                    }
+
+                    .text-field-address {
+                        right: @right;
+                        bottom: @bottom;
+                        font-size: @address-font-size;
+                        width: 50%;
+                    }
                 }
             }
         }
@@ -292,8 +343,6 @@
                             &.real-estate-listing {
 
                                 img {
-                                    clear: both;
-                                    float: left;
                                     margin-right: 25px;
                                     border: thin solid gray;
                                     padding: 4px;
@@ -301,8 +350,6 @@
                                 }
 
                                 p {
-                                    float: left;
-                                    clear: left;
                                     border-bottom: thin solid black;
                                     padding: 20px;
                                 }

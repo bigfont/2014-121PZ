@@ -12,34 +12,33 @@
 @import "_content-page.less";
 
 .lepage(@base-size) {
-    height: @base-size * 1.5;   
+    height: @base-size * 1.5;
     width: @base-size * 4; // this is sufficient
 }
 
-.hide {      
+.hide {
     display: none;
     visibility: hidden;
 }
 
 .show {
     display: block;
-    visibility: visible;   
+    visibility: visible;
 }
 
 body {
-    padding-top: 40px;
     margin: auto;
 }
 
 input, button {
-    color: black;   
+    color: black;
 }
 
 p.text-field {
     .name {
         .hide;
-    }                
-}  
+    }
+}
 
 #layout-header {
 
@@ -47,10 +46,10 @@ p.text-field {
         .hide;
     }
 }
- 
-#layout-featured { 
+
+#layout-featured {
     .widget-masthead-widget {
-        .text-field-tagline,   
+        .text-field-tagline,
         .text-field-company-name,
         .text-field-address {
             color: white;
@@ -59,15 +58,45 @@ p.text-field {
 }
 
 #layout-navigation {
-    /* Use contain not container-fluid in the navbar */
-    .navbar {
 
-        a {
-            font-size: 18px;
-            text-transform: uppercase;
+    @media(min-width:@grid-float-breakpoint) {
+        ul {
+            float: none;
+            display: table; // for shrink wrap
+            margin: auto;
+        }
+    }
+
+    @media(max-width:@grid-float-breakpoint-max) {
+        .container {
+            padding: 17px;
+            background: black;
+        }
+    }
+
+    .navbar {
+        .container {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+
+            a {
+                font-size: 18px;
+                text-transform: uppercase;
+                padding: 3px 5px;
+
+                @media (min-width: @screen-md-min) {
+                    padding: 3px 19px;
+                }
+
+                @media (min-width: @screen-lg-min) {
+                    padding: 3px 30px;
+                }
+            }
         }
     }
 }
+
 
 #layout-footer {
     border-top: solid thin gray;
