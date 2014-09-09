@@ -34,11 +34,11 @@
                 .text-field-phone {
                     color: white;
                     font-size: @phone-font-size;
-                    font-weight:normal;
+                    font-weight: normal;
                     left: auto;
                     position: absolute;
                     right: 80px;
-                    top: -30px;
+                    top: -32.5px;
                     z-index: 9999999;
                 }
 
@@ -87,7 +87,7 @@
                     .text-field-phone {
                         color: black;
                         top: @top;
-                        right:auto;
+                        right: auto;
                         margin-top: @header-font-size - @phone-font-size - 2px;
                         font-size: @phone-font-size;
                         margin-left: @header-width;
@@ -253,15 +253,18 @@
                 #content {
                     display: block;
                     max-width: 800px;
-                    margin: auto;
+                    margin: 15px auto;
                     border: solid thin black;
                     .box-shadow(0 0 10px @gray);
                     padding: 20px;
                     background-color: white;
                     position: relative;
-                    border-top: 15px solid transparent;
-                    border-bottom: 15px solid transparent;
-                    border-image: url("@{img-dir}vertical-stripes.png") 15 15 repeat;
+                    border-top: 15px solid black;
+                    border-bottom: 15px solid black;
+                    -moz-border-image: url("@{img-dir}vertical-stripes.png") 100% 0 100% 0 repeat;
+                    -o-border-image: url("@{img-dir}vertical-stripes.png") 100% 0 100% 0 repeat;
+                    -webkit-border-image: url("@{img-dir}vertical-stripes.png") 100% 0 100% 0 repeat;
+                    border-image: url("@{img-dir}vertical-stripes.png") 100% 0 100% 0 repeat;
 
                     &::after,
                     &::before {
@@ -271,12 +274,11 @@
                         background-repeat: repeat-x;
                         height: 15px;
                         left: -2px;
-                        background-image: linear-gradient(red, red);
+                        background-color: #EA1B23;
                     }
 
                     &::after {
                         top: -15px;
-                        background-size: 50%, 50%;
                         background-position: top;
                     }
 
@@ -291,6 +293,11 @@
 
                             > header > h1 {
                                 border-bottom: 2px solid black;
+                            }
+
+                            ul
+                                {
+                                padding-left:20px;
                             }
 
                             &.real-estate-listing {
