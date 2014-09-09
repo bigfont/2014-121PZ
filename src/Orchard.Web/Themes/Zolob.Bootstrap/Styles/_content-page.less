@@ -28,19 +28,18 @@
                 }
 
                 header {
-
-                    h1 {
-                        font-size: @header-font-size;
-                    }
-
-                    height: @header-font-size;
+                    .hide;
                 }
 
                 .text-field-phone {
-                    top: @top;
-                    margin-top: @header-font-size - @phone-font-size - 2px;
+                    color: white;
                     font-size: @phone-font-size;
-                    margin-left: @header-width;
+                    font-weight:normal;
+                    left: auto;
+                    position: absolute;
+                    right: 80px;
+                    top: -30px;
+                    z-index: 9999999;
                 }
 
                 .text-field-company-name {
@@ -58,7 +57,7 @@
                     margin-top: 0;
                     background-image: url("@{img-dir}banner-short-768.jpg");
 
-                    @top: 30%;
+                    @top: 45%;
                     @left: 27.5%;
                     @header-font-size: 36px;
                     @header-width: 180px;
@@ -76,6 +75,7 @@
                     }
 
                     header {
+                        .show;
 
                         h1 {
                             font-size: @header-font-size;
@@ -84,12 +84,10 @@
                         height: @header-font-size;
                     }
 
-                    .text-field-subtitle {
-                        .hide;
-                    }
-
                     .text-field-phone {
+                        color: black;
                         top: @top;
+                        right:auto;
                         margin-top: @header-font-size - @phone-font-size - 2px;
                         font-size: @phone-font-size;
                         margin-left: @header-width;
@@ -156,9 +154,7 @@
                     }
 
                     .text-field-company-name {
-
                         .show(inline-block);
-
                         bottom: @bottom;
                         font-size: @company-name-font-size;
                         margin-bottom: @address-font-size * 1.5;
@@ -299,16 +295,22 @@
 
                             &.real-estate-listing {
 
+                                address {
+                                    margin-bottom: 0;
+                                    padding-bottom: 0;
+                                    line-height: 0.98;
+                                    font-style: italic;
+                                }
+
+                                img, p {
+                                    display: block;
+                                }
+
                                 img {
                                     margin-right: 25px;
                                     border: thin solid gray;
                                     padding: 4px;
                                     border-radius: 4px;
-                                }
-
-                                p {
-                                    border-bottom: thin solid black;
-                                    padding: 20px;
                                 }
                             }
                         }

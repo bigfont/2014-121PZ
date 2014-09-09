@@ -348,6 +348,9 @@
   <ItemGroup>
     <Content Include="Zolob.Bootstrap\Styles\_splash-page.less" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zolob.Bootstrap\Styles\_projection-page.less" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
