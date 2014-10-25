@@ -1,4 +1,4 @@
-﻿* {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Century Gothic", "Times New Roman", Times, serif;
+  font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
   color: #222222;
@@ -1153,7 +1153,7 @@ a.list-group-item-danger.active:focus {
   right: 0.5%;
 }
 .detail-splash-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after {
-  background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/royal-lepage.jpg");
+  background-image: url("imgs/company-logo.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1205,7 +1205,7 @@ a.list-group-item-danger.active:focus {
     margin-bottom: 24px;
   }
   .detail-splash-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after {
-    background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/royal-lepage.jpg");
+    background-image: url("imgs/company-logo.jpg");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1263,7 +1263,7 @@ a.list-group-item-danger.active:focus {
     margin-bottom: 28px;
   }
   .detail-splash-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after {
-    background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/royal-lepage.jpg");
+    background-image: url("imgs/company-logo.jpg");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1382,7 +1382,7 @@ a.list-group-item-danger.active:focus {
     right: auto;
     margin-top: 10px;
     font-size: 24px;
-    margin-left: 180px;
+    margin-left: 230px;
   }
   .detail-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-tagline,
   .detail-projection-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-tagline,
@@ -1443,7 +1443,7 @@ a.list-group-item-danger.active:focus {
   .orchard-users #layout-featured div.zone-featured .widget-masthead-widget .text-field-subtitle {
     display: block !important;
     margin-top: 10px;
-    margin-left: 270px;
+    margin-left: 340px;
     font-size: 12px;
     font-weight: 700;
   }
@@ -1452,7 +1452,7 @@ a.list-group-item-danger.active:focus {
   .detail-real-estate-listing #layout-featured div.zone-featured .widget-masthead-widget .text-field-phone,
   .orchard-users #layout-featured div.zone-featured .widget-masthead-widget .text-field-phone {
     margin-top: 22px;
-    margin-left: 270px;
+    margin-left: 340px;
     font-size: 26px;
   }
   .detail-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name,
@@ -1469,7 +1469,7 @@ a.list-group-item-danger.active:focus {
   .detail-projection-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after,
   .detail-real-estate-listing #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after,
   .orchard-users #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after {
-    background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/royal-lepage.jpg");
+    background-image: url("imgs/company-logo.jpg");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1532,7 +1532,7 @@ a.list-group-item-danger.active:focus {
   .orchard-users #layout-featured div.zone-featured .widget-masthead-widget .text-field-subtitle {
     display: block !important;
     margin-top: 10px;
-    margin-left: 270px;
+    margin-left: 340px;
     font-size: 12px;
     font-weight: 700;
   }
@@ -1541,7 +1541,7 @@ a.list-group-item-danger.active:focus {
   .detail-real-estate-listing #layout-featured div.zone-featured .widget-masthead-widget .text-field-phone,
   .orchard-users #layout-featured div.zone-featured .widget-masthead-widget .text-field-phone {
     margin-top: 22px;
-    margin-left: 270px;
+    margin-left: 340px;
     font-size: 26px;
   }
   .detail-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name,
@@ -1557,7 +1557,7 @@ a.list-group-item-danger.active:focus {
   .detail-projection-page #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after,
   .detail-real-estate-listing #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after,
   .orchard-users #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name::after {
-    background-image: url("/Themes/Zolob.Bootstrap/Styles/imgs/royal-lepage.jpg");
+    background-image: url("imgs/company-logo.jpg");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1698,6 +1698,9 @@ a.list-group-item-danger.active:focus {
 body {
   margin: auto;
 }
+[style] {
+  font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 input,
 button {
   color: black;
@@ -1734,6 +1737,7 @@ p.text-field .name {
   line-height: 1;
   margin: 0;
 }
+#layout-featured div.zone-featured .widget-masthead-widget h1,
 #layout-featured div.zone-featured .widget-masthead-widget .text-field-subtitle,
 #layout-featured div.zone-featured .widget-masthead-widget .text-field-phone,
 #layout-featured div.zone-featured .widget-masthead-widget .text-field-company-name {
@@ -1798,4 +1802,3 @@ p.text-field .name {
 #layout-footer .zone-footer .credits {
   display: none !important;
 }
-/*# sourceMappingURL=theme.css.map */
